@@ -5,17 +5,23 @@ import React from 'react';
 import { StackNavigator } from 'react-navigation';
 
 // screens
-import { LandingPage, SignInPage } from './src/screen';
+import { LandingPage, SignInPage, SignUpPage } from './src/screen';
 
 export default MainStack = StackNavigator({
-  LandingPage: {
-    screen: LandingPage,
-    navigationOptions: {
-      header: null,
-    }
-  },
-  SignInPage: {
-    screen: SignInPage,
+  // LandingPage: {
+  //   screen: LandingPage,
+  //   navigationOptions: {
+  //     header: null,
+  //   }
+  // },
+  // SignInPage: {
+  //   screen: SignInPage,
+  //   navigationOptions: {
+  //     header: null,
+  //   }
+  // },
+  SignUpPage: {
+    screen: SignUpPage,
     navigationOptions: {
       header: null,
     }

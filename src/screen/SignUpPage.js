@@ -15,8 +15,9 @@ import {
 } from 'react-native';
 
 // third-party libraries
-import { Heading, Subtitle, DropDownMenu } from '@shoutem/ui';
+import { Heading, Subtitle } from '@shoutem/ui';
 import PhoneInput from "react-native-phone-input";
+import Toast from 'react-native-simple-toast';
 
 // common
 import { StatusBarComponent } from "../common";
@@ -29,13 +30,6 @@ class SignUpPage extends React.Component {
     phoneNumber: '',
 
     loading: false,
-
-    filters: [
-      { name: 'Select your university', value: '0' },
-      { name: 'Covenant University', value: 'Covenant University' },
-      { name: 'Babcock University', value: 'Babcock University' },
-      { name: 'Redeemers University', value: 'Redeemers University' },
-    ],
   };
 
   /**
@@ -45,12 +39,27 @@ class SignUpPage extends React.Component {
    * @return {void}
    */
   updateInfo = () => {
-    this.setState({ loading: !this.state.loading });
     this.setState({
       isValidPhoneNumber: this.phone.isValidNumber(),
       type: this.phone.getNumberType(),
       phoneNumber: this.phone.getValue()
-    });
+    }, () => this.confirmPhoneNumber());
+  };
+
+  /**
+   * confirmPhoneNumber
+   *
+   * Confirms user phone number
+   * @return {*}
+   */
+  confirmPhoneNumber = () => {
+    return this.state.isValidPhoneNumber
+    ? this.verifyPhoneNumber()
+    : Toast.showWithGravity(`Enter a valid phone number`, Toast.LONG, Toast.TOP);
+  };
+
+  verifyPhoneNumber = () => {
+    Toast.showWithGravity(`SendingText Message`, Toast.LONG, Toast.TOP);
   };
 
   render() {
@@ -58,7 +67,6 @@ class SignUpPage extends React.Component {
     const {
       container,
       progressBar,
-      stageTwoStyle,
       landingPageBodyText,
       signInStyle,
       TextShadowStyle,
@@ -110,19 +118,6 @@ class SignUpPage extends React.Component {
                   />
                 </View>
               </View>
-              <View style={{ height: height / 10, width: width / 1.5}}>
-                <View style={{ paddingLeft: width / 20, }}>
-                  <DropDownMenu
-                    options={this.state.filters}
-                    selectedOption={this.state.selectedSlot ? this.state.selectedSlot : this.state.filters[0]}
-                    onOptionSelected={(filter) => this.setState({ selectedSlot: filter })}
-                    titleProperty="name"
-                    valueProperty="value"
-                    visibleOptions={5}
-                    vertical
-                  />
-                </View>
-              </View>
               <TouchableOpacity style={{ alignItems: 'center'}} onPress={this.updateInfo}>
                 <Text style={[landingPageBodyText, signInStyle, TextShadowStyle]} hitSlop={{top: 20, left: 20, bottom: 20, right: 20}}>Next</Text>
               </TouchableOpacity>
@@ -144,12 +139,6 @@ const styles = StyleSheet.create({
   progressBar: {
     width: Dimensions.get('window').width / 1,
     height: Dimensions.get('window').height / 10
-  },
-  stageTwoStyle: {
-    // flex: 1,
-    // alignItems: "center",
-    // backgroundColor: '#fff',
-    paddingLeft: Dimensions.get('window').width / 5,
   },
   landingPageBody: {
     flexDirection: 'column',

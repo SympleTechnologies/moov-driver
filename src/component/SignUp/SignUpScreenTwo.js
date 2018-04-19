@@ -44,9 +44,9 @@ class SignUpScreenTwo extends React.Component {
    * @return {void}
    */
   componentDidMount() {
-    this.setState({
-      phoneNumber: this.props.navigation.state.params.phoneNumber,
-    });
+    // this.setState({
+    //   phoneNumber: this.props.navigation.state.params.phoneNumber,
+    // });
   }
 
   /**

@@ -67,7 +67,7 @@ const SignUpForm =
             secureTextEntry
             value={confirmPasswordValue} />
         </View>
-        <View style={{ height: height / 15, alignItems: 'center', flexDirection: 'column'}}>
+        <View style={{ height: height / 10, alignItems: 'center', flexDirection: 'column'}}>
           <View>
             <TouchableOpacity style={{ alignItems: 'center'}} onPress={onSubmit}>
               <Text style={[landingPageBodyText, signInStyle, TextShadowStyle]} hitSlop={{top: 20, left: 20, bottom: 20, right: 20}}>Sign Up</Text>

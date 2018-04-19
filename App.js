@@ -11,18 +11,18 @@ import { LandingPage, SignInPage, SignUpPage } from './src/screen';
 import { SignUpScreenTwo, SignUpScreenThree } from './src/component/SignUp';
 
 export default MainStack = StackNavigator({
-  // LandingPage: {
-  //   screen: LandingPage,
-  //   navigationOptions: {
-  //     header: null,
-  //   }
-  // },
-  // SignInPage: {
-  //   screen: SignInPage,
-  //   navigationOptions: {
-  //     header: null,
-  //   }
-  // },
+  LandingPage: {
+    screen: LandingPage,
+    navigationOptions: {
+      header: null,
+    }
+  },
+  SignInPage: {
+    screen: SignInPage,
+    navigationOptions: {
+      header: null,
+    }
+  },
   SignUpPage: {
     screen: SignUpPage,
     navigationOptions: {

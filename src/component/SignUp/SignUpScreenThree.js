@@ -15,47 +15,65 @@ import {
 } from 'react-native';
 
 // third-party libraries
-import { Heading, Subtitle } from '@shoutem/ui';
+import { Heading, Subtitle, DropDownMenu } from '@shoutem/ui';
 import PhoneInput from "react-native-phone-input";
 import Toast from 'react-native-simple-toast';
 
-// common
-import { StatusBarComponent } from "../common";
 
-class SignUpPage extends React.Component {
+// common
+import { StatusBarComponent } from "../../common";
+
+class SignUpScreenThree extends React.Component {
 
   state= {
-    isValidPhoneNumber: '',
-    type: '',
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
     phoneNumber: '',
+    authentication_type: '',
+    school: '',
 
     loading: false,
+
+    filters: [
+      { name: 'SELECT YOUR SCHOOL', value: '0' },
+      { name: 'AFEBABALOLA UNIVERSITY', value: 'AFEBABALOLA UNIVERSITY' },
+      { name: 'BABCOCK UNIVERSITY', value: 'BABCOCK UNIVERSITY' },
+      { name: 'COVENANT UNIVERSITY', value: 'COVENANT UNIVERSITY' },
+      { name: 'REDEEMERS UNIVERSITY', value: 'REDEEMERS UNIVERSITY' },
+    ],
+
+    selectedSchool: ''
   };
 
   /**
-   * updateInfo
+   * componentDidMount
    *
-   * Updates phone number details
+   * React life-cycle method sets user token
    * @return {void}
    */
-  updateInfo = () => {
+  componentDidMount() {
     this.setState({
-      isValidPhoneNumber: this.phone.isValidNumber(),
-      type: this.phone.getNumberType(),
-      phoneNumber: this.phone.getValue()
-    }, () => this.confirmPhoneNumber());
-  };
+      firstName: this.props.navigation.state.params.firstName,
+      lastName: this.props.navigation.state.params.lastName,
+      email: this.props.navigation.state.params.email,
+      password: this.props.navigation.state.params.password,
+      phoneNumber: this.props.navigation.state.params.phoneNumber,
+      authentication_type: this.props.navigation.state.params.authentication_type,
+    })
+  }
 
   /**
-   * confirmPhoneNumber
+   * confirmSchool
    *
-   * Confirms user phone number
+   * Confirms user school
    * @return {*}
    */
-  confirmPhoneNumber = () => {
-    return this.state.isValidPhoneNumber
-    ? this.appNavigator()
-    : Toast.showWithGravity(`Enter a valid phone number`, Toast.LONG, Toast.TOP);
+  confirmSchool = () => {
+    return this.state.selectedSchool !== ''
+      ? this.appNavigator()
+      : Toast.showWithGravity(`Select your school`, Toast.LONG, Toast.TOP);
   };
 
   /**
@@ -65,9 +83,10 @@ class SignUpPage extends React.Component {
    */
   appNavigator = () => {
     const { navigate } = this.props.navigation;
-    navigate('SignUpScreenTwo', {
-      phoneNumber: this.state.phoneNumber,
-    });
+    Toast.showWithGravity(`Registration is over`, Toast.LONG, Toast.TOP);
+    // navigate('SignUpScreenTwo', {
+    //   phoneNumber: this.state.phoneNumber,
+    // });
   };
 
   render() {
@@ -102,31 +121,31 @@ class SignUpPage extends React.Component {
         <View style={container}>
           <StatusBarComponent backgroundColor='white' barStyle="dark-content"/>
           <View style={{ height: height / 10}}>
-            <Heading>Get MOOVING.</Heading>
+            <Heading>One click away.</Heading>
           </View>
           <Image
             style={progressBar}
-            source={require('../../assets/formA.png')}
+            source={require('../../../assets/formC.png')}
           />
           <View>
             <View>
-              <View style={{ height: height / 15, alignItems: 'center'}}>
-                <Subtitle>Enter phone number:</Subtitle>
-              </View>
+              {/*<View style={{ height: height / 15, alignItems: 'center'}}>*/}
+                {/*<Subtitle style={{ color: '#333'}}>Select your school:</Subtitle>*/}
+              {/*</View>*/}
               <View style={{ height: height / 10, width: width / 1.5}}>
-                <View style={{ paddingLeft: width / 8, }}>
-                  <PhoneInput
-                    ref={ref => {
-                      this.phone = ref;
-                    }}
-                    initialCountry='ng'
-                    autoFocus
-                    allowZeroAfterCountryCode
-                    textProps={{ placeholder: 'Telephone number' }}
+                <View>
+                  <DropDownMenu
+                    options={this.state.filters}
+                    selectedOption={this.state.selectedSchool ? this.state.selectedSchool : this.state.filters[0]}
+                    onOptionSelected={(filter) => this.setState({ selectedSchool: filter })}
+                    titleProperty="name"
+                    valueProperty="value"
+                    visibleOptions={5}
+                    vertical
                   />
                 </View>
               </View>
-              <TouchableOpacity style={{ alignItems: 'center'}} onPress={this.updateInfo}>
+              <TouchableOpacity style={{ alignItems: 'center'}} onPress={this.confirmSchool}>
                 <Text style={[landingPageBodyText, signInStyle, TextShadowStyle]} hitSlop={{top: 20, left: 20, bottom: 20, right: 20}}>Next</Text>
               </TouchableOpacity>
             </View>
@@ -185,4 +204,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export { SignUpPage };
+export { SignUpScreenThree };

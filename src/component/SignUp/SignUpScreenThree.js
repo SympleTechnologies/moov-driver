@@ -11,12 +11,13 @@ import {
   TouchableOpacity,
   ActivityIndicator,
   Keyboard,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
+  AsyncStorage
 } from 'react-native';
 
 // third-party libraries
-import { Heading, Subtitle, DropDownMenu } from '@shoutem/ui';
-import PhoneInput from "react-native-phone-input";
+import { Heading, DropDownMenu } from '@shoutem/ui';
+import axios from 'axios';
 import Toast from 'react-native-simple-toast';
 
 
@@ -126,7 +127,7 @@ class SignUpScreenThree extends React.Component {
    */
   confirmSchool = () => {
     return this.state.selectedSchool !== ''
-      ? this.appNavigator()
+      ? this.signUpWithEmailAndPassword()
       : Toast.showWithGravity(`Select your school`, Toast.LONG, Toast.TOP);
   };
 
@@ -141,6 +142,52 @@ class SignUpScreenThree extends React.Component {
     // navigate('SignUpScreenTwo', {
     //   phoneNumber: this.state.phoneNumber,
     // });
+  };
+
+  /**
+   * signUpWithEmailAndPassword
+   *
+   * signs up users using email and password
+   * @return {void}
+   */
+  signUpWithEmailAndPassword  = () => {
+    this.setState({ loading: !this.state.loading });
+    console.log(this.state);
+    axios.post('https://moov-backend-staging.herokuapp.com/api/v1/signup', {
+      "password": this.state.password,
+      "user_type": "driver",
+      "firstname":  this.state.firstName ,
+      "lastname": this.state.lastName,
+      "email": this.state.email,
+      "mobile_number": this.state.phoneNumber,
+      "school": this.state.selectedSchool.name,
+      "authentication_type": this.state.authentication_type
+    })
+      .then((response) => {
+        console.log(response.data.data);
+        this.setState({ loading: !this.state.loading, userCreated: !this.state.userCreated });
+        alert(`${response.data.data.message}`);
+        this.saveUserToLocalStorage(response.data.data);
+      })
+      .catch((error) => {
+        console.log(error.response.data.data);
+        alert(`${error.response.data.data.message}`);
+        this.setState({ loading: !this.state.loading });
+      });
+  };
+
+  /**
+   * saveUserToLocalStorage
+   *
+   * Saves user details to local storage
+   * @param userDetails
+   */
+  saveUserToLocalStorage = (userDetails) => {
+    const { navigate } = this.props.navigation;
+    AsyncStorage.setItem('user', JSON.stringify(userDetails.user))
+    AsyncStorage.setItem("token", userDetails.token).then(() => {
+      this.appNavigator();
+    });
   };
 
   render() {
@@ -183,9 +230,6 @@ class SignUpScreenThree extends React.Component {
           />
           <View>
             <View>
-              {/*<View style={{ height: height / 15, alignItems: 'center'}}>*/}
-              {/*<Subtitle style={{ color: '#333'}}>Select your school:</Subtitle>*/}
-              {/*</View>*/}
               <View style={{ height: height / 10, width: width / 1.5}}>
                 <View>
                   <DropDownMenu
@@ -241,7 +285,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginBottom: 20,
     backgroundColor: 'white',
-    // textDecorationLine: 'underline',
   },
   TextShadowStyle:
     {

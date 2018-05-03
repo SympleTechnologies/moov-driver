@@ -44,9 +44,9 @@ class SignUpScreenTwo extends React.Component {
    * @return {void}
    */
   componentDidMount() {
-    // this.setState({
-    //   phoneNumber: this.props.navigation.state.params.phoneNumber,
-    // });
+    this.setState({
+      phoneNumber: this.props.navigation.state.params.phoneNumber,
+    });
   }
 
   /**
@@ -119,7 +119,6 @@ class SignUpScreenTwo extends React.Component {
   };
 
   render() {
-    console.log(this.state);
     const { container, progressBar, activityIndicator } = styles;
     let { height } = Dimensions.get('window');
 

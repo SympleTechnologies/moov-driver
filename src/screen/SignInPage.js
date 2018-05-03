@@ -9,7 +9,7 @@ import {
 
 // third-party libraries
 import Toast from 'react-native-simple-toast';
-// import * as axios from "axios/index";
+import * as axios from "axios/index";
 import { Caption, Subtitle, Title } from '@shoutem/ui';
 
 // common
@@ -67,7 +67,7 @@ class SignInPage extends React.Component {
    * @return {void}
    */
   resetPassword = () => {
-    console.log('called');
+    console.log('called', this.state);
     this.setState({ loading: !this.state.loading });
     axios.post('https://moov-backend-staging.herokuapp.com/api/v1/forgot_password', {
       "email": this.state.email,

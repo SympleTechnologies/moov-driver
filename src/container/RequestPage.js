@@ -8,7 +8,9 @@ import {
   Dimensions,
   Text,
   ActivityIndicator,
-  AsyncStorage
+  AsyncStorage,
+  PermissionsAndroid,
+  Platform
 } from 'react-native';
 
 // third-part library
@@ -43,7 +45,87 @@ class RequestPage extends React.Component {
         user: JSON.parse(value) ,
       });
     }).done();
+
+    if(Platform.OS === 'ios') {
+      this.getMyLocation();
+    }
+
+    if(Platform.OS === 'android') {
+      this.requestLocationPermission()
+        .then((response) => {
+          console.log(response, 'RESPONSE');
+        });
+      console.log('Android');
+    }
   }
+
+  /**
+   * requestLocationPermission
+   *
+   * request permission for android users
+   * @return {Promise<void>}
+   */
+  async requestLocationPermission () {
+    try {
+      const granted = await PermissionsAndroid.request(
+        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+        {
+          'title': 'MOOV App Location Permission',
+          'message': 'MOOV App needs access to your location ' +
+          'so you can order a cab.'
+        }
+      );
+      if (granted === PermissionsAndroid.RESULTS.GRANTED) {
+        console.log("You can use the location");
+        this.getMyLocation();
+      } else {
+        console.log("Location permission denied");
+        this.requestLocationPermission();
+      }
+    } catch (err) {
+      console.warn(err)
+    }
+  };
+
+  /**
+   * getMyLocation
+   *
+   * Get's user location and sets it in the state
+   * @return {void}
+   */
+  getMyLocation = () => {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        console.log("wokeeey");
+        console.log(position);
+        // this.getUserLocationUsingRN();
+      },
+      (error) => this.setState({ error: error.message }),
+      { enableHighAccuracy: true, timeout: 200000, maximumAge: 1000 },
+    );
+    this.watchLocation();
+  };
+
+  /**
+   * watchLocation
+   *
+   * Get's user location and sets it in the state as user moves
+   * @return {void}
+   */
+  watchLocation = () => {
+    this.watchId = navigator.geolocation.watchPosition(
+      (position) => {
+        console.log(position);
+        this.setState({
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+          error: null,
+        });
+      },
+      (error) => this.setState({ error: error.message }),
+      { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000, distanceFilter: 10 },
+    );
+  };
 
   render() {
     console.log(this.state);

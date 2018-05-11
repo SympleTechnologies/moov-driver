@@ -23,6 +23,7 @@ import Toast from 'react-native-simple-toast';
 
 // common
 import { StatusBarComponent } from "../../common";
+import {MoovPages} from "../../screen";
 
 class SignUpScreenThree extends React.Component {
 
@@ -108,9 +109,7 @@ class SignUpScreenThree extends React.Component {
   appNavigator = () => {
     const { navigate } = this.props.navigation;
     Toast.showWithGravity(`Registration is over`, Toast.LONG, Toast.TOP);
-    // navigate('SignUpScreenTwo', {
-    //   phoneNumber: this.state.phoneNumber,
-    // });
+    navigate('MoovPages');
   };
 
   /**
@@ -152,8 +151,7 @@ class SignUpScreenThree extends React.Component {
    * @param userDetails
    */
   saveUserToLocalStorage = (userDetails) => {
-    const { navigate } = this.props.navigation;
-    AsyncStorage.setItem('user', JSON.stringify(userDetails.user))
+    AsyncStorage.setItem('user', JSON.stringify(userDetails.user));
     AsyncStorage.setItem("token", userDetails.token).then(() => {
       this.appNavigator();
     });

@@ -8,6 +8,7 @@ import {
   Dimensions,
   Text,
   ActivityIndicator,
+  AsyncStorage
 } from 'react-native';
 
 // third-part library
@@ -16,13 +17,14 @@ import Toast from 'react-native-simple-toast';
 // common
 import {StatusBarComponent} from "../common";
 
-class SignUpScreenTwo extends React.Component {
+class RequestPage extends React.Component {
   constructor(){
     super();
   }
 
   state= {
-
+    userToken: '',
+    user: []
   };
 
   /**
@@ -32,12 +34,20 @@ class SignUpScreenTwo extends React.Component {
    * @return {void}
    */
   componentDidMount() {
-    this.setState({
-      phoneNumber: this.props.navigation.state.params.phoneNumber,
-    });
+    AsyncStorage.getItem("token").then((value) => {
+      this.setState({ userToken: value });
+    }).done();
+
+    AsyncStorage.getItem("user").then((value) => {
+      this.setState({
+        user: JSON.parse(value) ,
+      });
+    }).done();
   }
 
   render() {
+    console.log(this.state);
+
     const { container, activityIndicator } = styles;
     let { height } = Dimensions.get('window');
 
@@ -77,4 +87,4 @@ const styles = StyleSheet.create({
 
 });
 
-export { SignUpScreenTwo };
+export { RequestPage };

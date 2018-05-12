@@ -3,6 +3,7 @@ import React from 'react';
 
 // third-party libraries
 import { StackNavigator, TabNavigator } from 'react-navigation';
+import { Icon } from 'react-native-elements';
 
 // containers
 import { RequestPage } from '../container';
@@ -29,6 +30,11 @@ export const Tabs = TabNavigator({
       style: {
         color: '#004a80',
       },
+      tabBarIcon: ({ focused }) => (
+        focused
+          ? <Icon name="ios-car-outline" type="ionicon" color="black" />
+          : <Icon name="ios-car-outline" type="ionicon" color="#b3b4b4" />
+      ),
     },
   },
 }, {

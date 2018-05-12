@@ -168,7 +168,6 @@ class SignInPage extends React.Component {
   appNavigator = () => {
     console.log('here @22' );
     const { navigate } = this.props.navigation;
-    Toast.showWithGravity(`Registration is over`, Toast.LONG, Toast.TOP);
     navigate('MoovPages');
   };
 

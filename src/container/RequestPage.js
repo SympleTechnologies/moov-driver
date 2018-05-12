@@ -17,8 +17,7 @@ import {
 import Toast from 'react-native-simple-toast';
 import RNGooglePlaces from 'react-native-google-places';
 import axios from 'axios';
-
-
+import { Icon } from 'react-native-elements';
 
 // common
 import {StatusBarComponent} from "../common";

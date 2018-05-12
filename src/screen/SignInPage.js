@@ -9,7 +9,7 @@ import {
 
 // third-party libraries
 import Toast from 'react-native-simple-toast';
-// import * as axios from "axios/index";
+import * as axios from "axios/index";
 import { Caption, Subtitle, Title } from '@shoutem/ui';
 
 // common
@@ -31,9 +31,6 @@ class SignInPage extends React.Component {
   state = {
     email: '',
     password: '',
-
-    loading: false,
-    authentication_type: '',
   };
 
   /**
@@ -64,90 +61,12 @@ class SignInPage extends React.Component {
   };
 
   /**
-   * saveUserToLocalStorage
-   *
-   * Saves user details to local storage
-   * @param userDetails
-   */
-  saveUserToLocalStorage = (userDetails) => {
-    AsyncStorage.setItem("token", userDetails.token).then(() => {
-      AsyncStorage.setItem('user', JSON.stringify(userDetails.data));
-      this.appNavigation('Homepage');
-    });
-  };
-
-  /**
-   * appNavigation
-   *
-   * @param {string} page - The page the user wants to navigate to
-   * @return {void}
-   */
-  signUpPage = () => {
-    const { navigate } = this.props.navigation;
-    navigate('SignUpPage');
-  };
-
-  /**
-   * appNavigation
-   *
-   * @param {string} page - The page the user wants to navigate to
-   * @return {void}
-   */
-  appNavigation = (page) => {
-    this.setState({ loading: !this.state.loading });
-    const { navigate } = this.props.navigation;
-
-    if (page === 'signup') {
-      this.setState({ loading: !this.state.loading });
-      // navigate('SignUpPage');
-    }
-
-    // if (page === 'Homepage') {
-    //   navigate('MoovPages');
-    // }
-    //
-    // if (page === 'signIn') {
-    //   navigate('SignInPage');
-    // }
-    //
-    // if (page === 'number') {
-    //   navigate('NumberFormPage', {
-    //     firstName: this.state.firstName,
-    //     lastName: this.state.lastName,
-    //     email: this.state.email,
-    //     socialEmail: this.state.socialEmail,
-    //     imgURL: this.state.imgURL,
-    //     userAuthID: this.state.userAuthID,
-    //     authentication_type: this.state.authentication_type
-    //   });
-    // }
-  };
-
-  /**
-   * checkErrorMessage
-   *
-   * checks error message from the server for right navigation
-   * @param {string} message - Error message from server
-   * @return {void}
-   */
-  checkErrorMessage = (message) => {
-    this.setState({ loading: !this.state.loading });
-    if(message === 'User does not exist') {
-      this.appNavigation('number');
-    } else {
-      LoginManager.logOut();
-      Toast.showWithGravity(`${message}`, Toast.LONG, Toast.TOP);
-    }
-  };
-
-  /**
    * resetPassword
    *
    * sends user reset email link
    * @return {void}
    */
   resetPassword = () => {
-    console.log('called');
     this.setState({ loading: !this.state.loading });
     axios.post('https://moov-backend-staging.herokuapp.com/api/v1/forgot_password', {
       "email": this.state.email,
@@ -169,8 +88,7 @@ class SignInPage extends React.Component {
    */
   submitForm = () => {
     if(this.validateFields()) {
-      this.setState({ loading: !this.state.loading });
-      this.signInWithEmailAndPassword();
+      this.signInWithEmailAndPassword()
     }
   };
 
@@ -195,19 +113,32 @@ class SignInPage extends React.Component {
   };
 
   /**
+   * appNavigation
+   *
+   * @param {string} page - The page the user wants to navigate to
+   * @return {void}
+   */
+  signUpPage = () => {
+    const { navigate } = this.props.navigation;
+    navigate('SignUpPage');
+  };
+
+  /**
    * signInWithEmailAndPassword
    *
    * Sign in with user's email and password
    * @return {void}
    */
   signInWithEmailAndPassword = () => {
+    this.setState({ loading: !this.state.loading });
     axios.post('https://moov-backend-staging.herokuapp.com/api/v1/login', {
       "email": this.state.email,
       "password": this.state.password,
     })
       .then((response) => {
-        console.log(response.data.data);
+        console.log(response.data.data)
         this.saveUserToLocalStorage(response.data.data);
+        this.setState({ loading: !this.state.loading });
         Toast.showWithGravity(`${response.data.data.message}`, Toast.LONG, Toast.TOP);
       })
       .catch((error) => {
@@ -216,9 +147,32 @@ class SignInPage extends React.Component {
       });
   };
 
+  /**
+   * saveUserToLocalStorage
+   *
+   * Saves user details to local storage
+   * @param userDetails
+   */
+  saveUserToLocalStorage = (userDetails) => {
+    AsyncStorage.setItem('user', JSON.stringify(userDetails.data));
+    AsyncStorage.setItem("token", userDetails.token).then(() => {
+      this.appNavigator();
+    });
+  };
+
+  /**
+   * appNavigator
+   *
+   * navigates user to second registration screen
+   */
+  appNavigator = () => {
+    console.log('here @22' );
+    const { navigate } = this.props.navigation;
+    navigate('MoovPages');
+  };
 
   render() {
-
+    console.log(this.state)
     const { container, activityIndicator } = styles;
     let { height, width } = Dimensions.get('window');
 
@@ -268,7 +222,7 @@ class SignInPage extends React.Component {
         </View>
 
         {/*Sign-In form*/}
-        <View style={{ marginBottom: height / 25 }}>
+        <View>
           <SignInFormPage
             emailValue={this.state.email}
             passwordValue={this.state.password}
@@ -280,7 +234,7 @@ class SignInPage extends React.Component {
             onSubmit={() => this.submitForm()}
           />
           <TouchableOpacity onPress={this.resetPassword}>
-            <Caption style={{ textAlign: 'center', color: 'red', fontSize: 10 }}>Forgot password</Caption>
+            <Caption style={{ textAlign: 'center', color: 'red', fontSize: 13 }}>Forgot password</Caption>
           </TouchableOpacity>
         </View>
 

@@ -1,0 +1,800 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4FDD8641F663609DFF275E4F23110DDE /* Pods-moovdriver-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26E0AF10D75589F954D3AA92054532A0 /* Pods-moovdriver-dummy.m */; };
+		58728EEC86C45EA5CEE26B8DF1DB6D7E /* Pods-moovdriverTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 13632503442A1C6CEE5BEBAB98E9D685 /* Pods-moovdriverTests-dummy.m */; };
+		7A30A72853E04949D754E6962095E038 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D154F4805B9715F0E6D79B0363CE280 /* Foundation.framework */; };
+		7AEDFD72084B373675BC3E90D4D4581F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572DBE63D5360AB71E5F80F979738FD0 /* Foundation.framework */; };
+		7BD87FBB81A8D698C8B77AAD5CEE3D4F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D154F4805B9715F0E6D79B0363CE280 /* Foundation.framework */; };
+		A258E014F2FD7DCFA988115065533A88 /* Pods-moovdriver-tvOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 890E6AF3C7CB8855C043870A4CEF004C /* Pods-moovdriver-tvOSTests-dummy.m */; };
+		DD5F6E290BB44A2DFD749A190DD5B34B /* Pods-moovdriver-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C163F3A75F1EA6195E12A690C55CD6F9 /* Pods-moovdriver-tvOS-dummy.m */; };
+		DFDE4967F2972861C11E8C18E240A3FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572DBE63D5360AB71E5F80F979738FD0 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00F5BD9506400B8D9A3816C1F4EEE698 /* Pods-moovdriver-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-moovdriver-acknowledgements.markdown"; sourceTree = "<group>"; };
+		01683DAA18E7A39E3FAFAEE7DDA960DB /* Pods-moovdriver-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-moovdriver-frameworks.sh"; sourceTree = "<group>"; };
+		06A1EDAE157A3B7000625251027E95B6 /* libPods-moovdriver-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-moovdriver-tvOS.a"; path = "libPods-moovdriver-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07790BD46C0A51AE9AF086D8F62242CC /* GooglePlacePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlacePicker.framework; path = Frameworks/GooglePlacePicker.framework; sourceTree = "<group>"; };
+		0BC362D69E91F5AD50CB873776D5B017 /* Pods-moovdriver-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-moovdriver-tvOS-resources.sh"; sourceTree = "<group>"; };
+		0EFF6D664215BE445BC8A0F3F878EC40 /* libPods-moovdriverTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-moovdriverTests.a"; path = "libPods-moovdriverTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1117A6D1FE68A6F983D560933AF5E265 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		13632503442A1C6CEE5BEBAB98E9D685 /* Pods-moovdriverTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-moovdriverTests-dummy.m"; sourceTree = "<group>"; };
+		20D2C56481F70ECECB54205F1AE4F0FA /* Pods-moovdriver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-moovdriver.debug.xcconfig"; sourceTree = "<group>"; };
+		228D4AB228C90209EEF76E45468967F5 /* Pods-moovdriver-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-moovdriver-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		26E0AF10D75589F954D3AA92054532A0 /* Pods-moovdriver-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-moovdriver-dummy.m"; sourceTree = "<group>"; };
+		2D154F4805B9715F0E6D79B0363CE280 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		35D95135F8116143230D0E1703987A69 /* Pods-moovdriver-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-moovdriver-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		38A80A3CC9CBFF0C1584549100D31AB0 /* Pods-moovdriver-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-moovdriver-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		3D07AA748246AE2CFF5ECF3A453E0802 /* Pods-moovdriver-tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-moovdriver-tvOS-frameworks.sh"; sourceTree = "<group>"; };
+		521A62445FAC1EF766C5C01934C390F1 /* libPods-moovdriver-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-moovdriver-tvOSTests.a"; path = "libPods-moovdriver-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		572DBE63D5360AB71E5F80F979738FD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		610D3AB8CF6EEFFFEFBEB5587404F48F /* Pods-moovdriverTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-moovdriverTests-frameworks.sh"; sourceTree = "<group>"; };
+		6A45A87CA22F325197EC18E776260DFA /* Pods-moovdriver-tvOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-moovdriver-tvOSTests-frameworks.sh"; sourceTree = "<group>"; };
+		6FC21B0649BF4D7869EC509579317EA0 /* Pods-moovdriver-tvOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-moovdriver-tvOSTests-resources.sh"; sourceTree = "<group>"; };
+		7BAC1E5EFB395946BF948BA08FA7C8D5 /* Pods-moovdriver-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-moovdriver-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		83A93B090C3B99F5EB3752282D694FAF /* Pods-moovdriver-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-moovdriver-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		890E6AF3C7CB8855C043870A4CEF004C /* Pods-moovdriver-tvOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-moovdriver-tvOSTests-dummy.m"; sourceTree = "<group>"; };
+		8BCCCA295DEE22197B0C283775AB5A26 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		955D3A22EB34AB333524A949DC729F6B /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GooglePlaces.framework; path = Frameworks/GooglePlaces.framework; sourceTree = "<group>"; };
+		9D63BD6BDD3A74A29A6D96FDBC8B5C21 /* Pods-moovdriver-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-moovdriver-acknowledgements.plist"; sourceTree = "<group>"; };
+		A28C1855E239E39FAEA65FD826A42458 /* Pods-moovdriver-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-moovdriver-resources.sh"; sourceTree = "<group>"; };
+		A919EF225B003CD0ECC2EF5A8CD7FC6C /* libPods-moovdriver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-moovdriver.a"; path = "libPods-moovdriver.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AD3253D30E9DA0D5BE29AD8564583210 /* Pods-moovdriver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-moovdriver.release.xcconfig"; sourceTree = "<group>"; };
+		B930FB2030D6364D09184F68F8814729 /* Pods-moovdriverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-moovdriverTests.release.xcconfig"; sourceTree = "<group>"; };
+		B9B940E1693884E5C7E751D263379D72 /* GooglePlaces.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		C163F3A75F1EA6195E12A690C55CD6F9 /* Pods-moovdriver-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-moovdriver-tvOS-dummy.m"; sourceTree = "<group>"; };
+		C7EB53C3E5115457128C10A48F2CBC68 /* Pods-moovdriverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-moovdriverTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CDF73D69BD8539AFDE2C4FA9FBA67AE5 /* Pods-moovdriver-tvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-moovdriver-tvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D1DBCD0071D70866EBEFA8E983E0A2FE /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		D57A28887B9E80E29D36BD414E63A790 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		DE6D813C2480BFCB39E614B9535A00EF /* GooglePlacePicker.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GooglePlacePicker.bundle; path = Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle; sourceTree = "<group>"; };
+		E681DA69E8C2CA7EFD7919BB2226538C /* Pods-moovdriver-tvOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-moovdriver-tvOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		E770C75C3170ACB17B20C7A7B3CD3CD9 /* Pods-moovdriverTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-moovdriverTests-resources.sh"; sourceTree = "<group>"; };
+		E86CE49F7B8308D1D17739BAE81C47FE /* Pods-moovdriverTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-moovdriverTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EBA69C5CBA923FE7F9C545BEF8DE7393 /* Pods-moovdriver-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-moovdriver-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F76323954DAE0E6EFCB937D78CECB216 /* Pods-moovdriverTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-moovdriverTests-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		081B869D3E3232ADCD6098E565C5EF79 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFDE4967F2972861C11E8C18E240A3FF /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60E21D0559AAAE68D803C87605B3DAA6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BD87FBB81A8D698C8B77AAD5CEE3D4F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		685E1BC2469C26F7034C0053F5A989AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7AEDFD72084B373675BC3E90D4D4581F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E8D6551810FF3CBF6F3F40314A70D4B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A30A72853E04949D754E6962095E038 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		057612C31241123A1B53E2F8FEE23AB0 /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				8BA44F82F96D164DA342FB09A0BEE150 /* Frameworks */,
+				DADFB7FC1731804E229D4AEF6493F2F7 /* Resources */,
+			);
+			name = GooglePlaces;
+			path = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		09F67B0194E9547E1B878431D0385456 /* Pods-moovdriverTests */ = {
+			isa = PBXGroup;
+			children = (
+				E86CE49F7B8308D1D17739BAE81C47FE /* Pods-moovdriverTests-acknowledgements.markdown */,
+				F76323954DAE0E6EFCB937D78CECB216 /* Pods-moovdriverTests-acknowledgements.plist */,
+				13632503442A1C6CEE5BEBAB98E9D685 /* Pods-moovdriverTests-dummy.m */,
+				610D3AB8CF6EEFFFEFBEB5587404F48F /* Pods-moovdriverTests-frameworks.sh */,
+				E770C75C3170ACB17B20C7A7B3CD3CD9 /* Pods-moovdriverTests-resources.sh */,
+				C7EB53C3E5115457128C10A48F2CBC68 /* Pods-moovdriverTests.debug.xcconfig */,
+				B930FB2030D6364D09184F68F8814729 /* Pods-moovdriverTests.release.xcconfig */,
+			);
+			name = "Pods-moovdriverTests";
+			path = "Target Support Files/Pods-moovdriverTests";
+			sourceTree = "<group>";
+		};
+		20F731AE46C73F232AF0C168DC383CF9 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				572DBE63D5360AB71E5F80F979738FD0 /* Foundation.framework */,
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
+		2180B2329DDD832B723BCAC9C50586E0 /* Pods-moovdriver-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				EBA69C5CBA923FE7F9C545BEF8DE7393 /* Pods-moovdriver-tvOS-acknowledgements.markdown */,
+				38A80A3CC9CBFF0C1584549100D31AB0 /* Pods-moovdriver-tvOS-acknowledgements.plist */,
+				C163F3A75F1EA6195E12A690C55CD6F9 /* Pods-moovdriver-tvOS-dummy.m */,
+				3D07AA748246AE2CFF5ECF3A453E0802 /* Pods-moovdriver-tvOS-frameworks.sh */,
+				0BC362D69E91F5AD50CB873776D5B017 /* Pods-moovdriver-tvOS-resources.sh */,
+				228D4AB228C90209EEF76E45468967F5 /* Pods-moovdriver-tvOS.debug.xcconfig */,
+				35D95135F8116143230D0E1703987A69 /* Pods-moovdriver-tvOS.release.xcconfig */,
+			);
+			name = "Pods-moovdriver-tvOS";
+			path = "Target Support Files/Pods-moovdriver-tvOS";
+			sourceTree = "<group>";
+		};
+		2DCC88EBB11434EBF5AEDE346EEE797F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A919EF225B003CD0ECC2EF5A8CD7FC6C /* libPods-moovdriver.a */,
+				06A1EDAE157A3B7000625251027E95B6 /* libPods-moovdriver-tvOS.a */,
+				521A62445FAC1EF766C5C01934C390F1 /* libPods-moovdriver-tvOSTests.a */,
+				0EFF6D664215BE445BC8A0F3F878EC40 /* libPods-moovdriverTests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		45A6375AD18305E8BA7B79AD1BE61E9D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BCCCA295DEE22197B0C283775AB5A26 /* GoogleMaps.framework */,
+				1117A6D1FE68A6F983D560933AF5E265 /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		58996781A54EE964D7111D73083A18A5 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2D154F4805B9715F0E6D79B0363CE280 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		721CF5444AB1AFEAB99AC91893A1F3AD /* Pods-moovdriver */ = {
+			isa = PBXGroup;
+			children = (
+				00F5BD9506400B8D9A3816C1F4EEE698 /* Pods-moovdriver-acknowledgements.markdown */,
+				9D63BD6BDD3A74A29A6D96FDBC8B5C21 /* Pods-moovdriver-acknowledgements.plist */,
+				26E0AF10D75589F954D3AA92054532A0 /* Pods-moovdriver-dummy.m */,
+				01683DAA18E7A39E3FAFAEE7DDA960DB /* Pods-moovdriver-frameworks.sh */,
+				A28C1855E239E39FAEA65FD826A42458 /* Pods-moovdriver-resources.sh */,
+				20D2C56481F70ECECB54205F1AE4F0FA /* Pods-moovdriver.debug.xcconfig */,
+				AD3253D30E9DA0D5BE29AD8564583210 /* Pods-moovdriver.release.xcconfig */,
+			);
+			name = "Pods-moovdriver";
+			path = "Target Support Files/Pods-moovdriver";
+			sourceTree = "<group>";
+		};
+		7A999BD5B4C2C01904FC59776164FBE1 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				45A6375AD18305E8BA7B79AD1BE61E9D /* Frameworks */,
+				E8816D4FFB28FB18F0B906E7CC732470 /* Resources */,
+			);
+			name = Maps;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				A42F72DC1D780481325DD00969B19BB6 /* Frameworks */,
+				C62832EC902B481843EFC870F9D95CC2 /* Pods */,
+				2DCC88EBB11434EBF5AEDE346EEE797F /* Products */,
+				D626BEC13AAFD0960B50912C8879FE42 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8BA44F82F96D164DA342FB09A0BEE150 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				955D3A22EB34AB333524A949DC729F6B /* GooglePlaces.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8FFA7EAE118844748AD9685060A6B673 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				FD4ED290151C28ABCF7A3EA0217355EB /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		9C0A1FBBD02B7528347BC7FB84DE24F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				07790BD46C0A51AE9AF086D8F62242CC /* GooglePlacePicker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A42F72DC1D780481325DD00969B19BB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58996781A54EE964D7111D73083A18A5 /* iOS */,
+				20F731AE46C73F232AF0C168DC383CF9 /* tvOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C62832EC902B481843EFC870F9D95CC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5C0912CEC7444CFF51EFFE502270519 /* GoogleMaps */,
+				CCA175DF4D87459CA14C4E01BCFDEF95 /* GooglePlacePicker */,
+				057612C31241123A1B53E2F8FEE23AB0 /* GooglePlaces */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CA9D559C4E86F8FC1FB8C9144D9C72FD /* Pods-moovdriver-tvOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				CDF73D69BD8539AFDE2C4FA9FBA67AE5 /* Pods-moovdriver-tvOSTests-acknowledgements.markdown */,
+				E681DA69E8C2CA7EFD7919BB2226538C /* Pods-moovdriver-tvOSTests-acknowledgements.plist */,
+				890E6AF3C7CB8855C043870A4CEF004C /* Pods-moovdriver-tvOSTests-dummy.m */,
+				6A45A87CA22F325197EC18E776260DFA /* Pods-moovdriver-tvOSTests-frameworks.sh */,
+				6FC21B0649BF4D7869EC509579317EA0 /* Pods-moovdriver-tvOSTests-resources.sh */,
+				7BAC1E5EFB395946BF948BA08FA7C8D5 /* Pods-moovdriver-tvOSTests.debug.xcconfig */,
+				83A93B090C3B99F5EB3752282D694FAF /* Pods-moovdriver-tvOSTests.release.xcconfig */,
+			);
+			name = "Pods-moovdriver-tvOSTests";
+			path = "Target Support Files/Pods-moovdriver-tvOSTests";
+			sourceTree = "<group>";
+		};
+		CCA175DF4D87459CA14C4E01BCFDEF95 /* GooglePlacePicker */ = {
+			isa = PBXGroup;
+			children = (
+				9C0A1FBBD02B7528347BC7FB84DE24F5 /* Frameworks */,
+				CCDB8ACB50B37F1810F3A87BA87382A7 /* Resources */,
+			);
+			name = GooglePlacePicker;
+			path = GooglePlacePicker;
+			sourceTree = "<group>";
+		};
+		CCDB8ACB50B37F1810F3A87BA87382A7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DE6D813C2480BFCB39E614B9535A00EF /* GooglePlacePicker.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D626BEC13AAFD0960B50912C8879FE42 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				721CF5444AB1AFEAB99AC91893A1F3AD /* Pods-moovdriver */,
+				2180B2329DDD832B723BCAC9C50586E0 /* Pods-moovdriver-tvOS */,
+				CA9D559C4E86F8FC1FB8C9144D9C72FD /* Pods-moovdriver-tvOSTests */,
+				09F67B0194E9547E1B878431D0385456 /* Pods-moovdriverTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		DADFB7FC1731804E229D4AEF6493F2F7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B9B940E1693884E5C7E751D263379D72 /* GooglePlaces.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		E5C0912CEC7444CFF51EFFE502270519 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				8FFA7EAE118844748AD9685060A6B673 /* Base */,
+				7A999BD5B4C2C01904FC59776164FBE1 /* Maps */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
+			sourceTree = "<group>";
+		};
+		E8816D4FFB28FB18F0B906E7CC732470 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D57A28887B9E80E29D36BD414E63A790 /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		FD4ED290151C28ABCF7A3EA0217355EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D1DBCD0071D70866EBEFA8E983E0A2FE /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		008D50285D495D1B8750C1B4E0469706 /* Pods-moovdriver-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B450988FEEACF98584A0FA4F237D3204 /* Build configuration list for PBXNativeTarget "Pods-moovdriver-tvOS" */;
+			buildPhases = (
+				9F37A049A29DDF0C697E88B8CE16715E /* Sources */,
+				081B869D3E3232ADCD6098E565C5EF79 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-moovdriver-tvOS";
+			productName = "Pods-moovdriver-tvOS";
+			productReference = 06A1EDAE157A3B7000625251027E95B6 /* libPods-moovdriver-tvOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		17115A329483A2230922386C5419E181 /* Pods-moovdriver-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3ED91AFB2AC2836F4294E375C831D8DC /* Build configuration list for PBXNativeTarget "Pods-moovdriver-tvOSTests" */;
+			buildPhases = (
+				265D0CA130F5F37252DB0A7FBE83B4D4 /* Sources */,
+				685E1BC2469C26F7034C0053F5A989AC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-moovdriver-tvOSTests";
+			productName = "Pods-moovdriver-tvOSTests";
+			productReference = 521A62445FAC1EF766C5C01934C390F1 /* libPods-moovdriver-tvOSTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		3449ABE50B2562099863A2CEFBE4486D /* Pods-moovdriver */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0538ACE825E83A268B49548A7D3E753E /* Build configuration list for PBXNativeTarget "Pods-moovdriver" */;
+			buildPhases = (
+				21A59334A015BA10AAB888FC6DA725A8 /* Sources */,
+				8E8D6551810FF3CBF6F3F40314A70D4B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-moovdriver";
+			productName = "Pods-moovdriver";
+			productReference = A919EF225B003CD0ECC2EF5A8CD7FC6C /* libPods-moovdriver.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		C11F2807FC1EC45348BA36DF0FC430AD /* Pods-moovdriverTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8826544EE030D5A225E17BADC91C856 /* Build configuration list for PBXNativeTarget "Pods-moovdriverTests" */;
+			buildPhases = (
+				F4E07DAA941CCFBEDB1BAA175CFA4441 /* Sources */,
+				60E21D0559AAAE68D803C87605B3DAA6 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-moovdriverTests";
+			productName = "Pods-moovdriverTests";
+			productReference = 0EFF6D664215BE445BC8A0F3F878EC40 /* libPods-moovdriverTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 2DCC88EBB11434EBF5AEDE346EEE797F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3449ABE50B2562099863A2CEFBE4486D /* Pods-moovdriver */,
+				008D50285D495D1B8750C1B4E0469706 /* Pods-moovdriver-tvOS */,
+				17115A329483A2230922386C5419E181 /* Pods-moovdriver-tvOSTests */,
+				C11F2807FC1EC45348BA36DF0FC430AD /* Pods-moovdriverTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21A59334A015BA10AAB888FC6DA725A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FDD8641F663609DFF275E4F23110DDE /* Pods-moovdriver-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		265D0CA130F5F37252DB0A7FBE83B4D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A258E014F2FD7DCFA988115065533A88 /* Pods-moovdriver-tvOSTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F37A049A29DDF0C697E88B8CE16715E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD5F6E290BB44A2DFD749A190DD5B34B /* Pods-moovdriver-tvOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4E07DAA941CCFBEDB1BAA175CFA4441 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58728EEC86C45EA5CEE26B8DF1DB6D7E /* Pods-moovdriverTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1033AA014258C1FC8DC7857C55933A4B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 228D4AB228C90209EEF76E45468967F5 /* Pods-moovdriver-tvOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		1A15F2823E31A3210FE31A7B90D32B8F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		2CACCF3B09AAC96C683DCE709E55538B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35D95135F8116143230D0E1703987A69 /* Pods-moovdriver-tvOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		395E740ADB589F8A1D21CC9492078CF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83A93B090C3B99F5EB3752282D694FAF /* Pods-moovdriver-tvOSTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		39A485195E3407E8392BFC081CE8530B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
+		4D09E77C39833F24F89ED2D2F5EA6FB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C7EB53C3E5115457128C10A48F2CBC68 /* Pods-moovdriverTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5212399103878CEEFAAFAA6DF8C65D54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BAC1E5EFB395946BF948BA08FA7C8D5 /* Pods-moovdriver-tvOSTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		67C2393E08BB4549D11ED4B0BB15A162 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B930FB2030D6364D09184F68F8814729 /* Pods-moovdriverTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		806262163678F2AAD323CF9524CBE48D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AD3253D30E9DA0D5BE29AD8564583210 /* Pods-moovdriver.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BDFA34283367797A012166A95F483924 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20D2C56481F70ECECB54205F1AE4F0FA /* Pods-moovdriver.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0538ACE825E83A268B49548A7D3E753E /* Build configuration list for PBXNativeTarget "Pods-moovdriver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDFA34283367797A012166A95F483924 /* Debug */,
+				806262163678F2AAD323CF9524CBE48D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1A15F2823E31A3210FE31A7B90D32B8F /* Debug */,
+				39A485195E3407E8392BFC081CE8530B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3ED91AFB2AC2836F4294E375C831D8DC /* Build configuration list for PBXNativeTarget "Pods-moovdriver-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5212399103878CEEFAAFAA6DF8C65D54 /* Debug */,
+				395E740ADB589F8A1D21CC9492078CF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B450988FEEACF98584A0FA4F237D3204 /* Build configuration list for PBXNativeTarget "Pods-moovdriver-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1033AA014258C1FC8DC7857C55933A4B /* Debug */,
+				2CACCF3B09AAC96C683DCE709E55538B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8826544EE030D5A225E17BADC91C856 /* Build configuration list for PBXNativeTarget "Pods-moovdriverTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D09E77C39833F24F89ED2D2F5EA6FB1 /* Debug */,
+				67C2393E08BB4549D11ED4B0BB15A162 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

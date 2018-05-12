@@ -15,6 +15,10 @@ import {
 
 // third-part library
 import Toast from 'react-native-simple-toast';
+import RNGooglePlaces from 'react-native-google-places';
+import axios from 'axios';
+
+
 
 // common
 import {StatusBarComponent} from "../common";
@@ -26,7 +30,45 @@ class RequestPage extends React.Component {
 
   state= {
     userToken: '',
-    user: []
+    user: [],
+
+    myLocationLatitude: null,
+    myLocationLongitude: null,
+    myLocationName: '',
+    myLocationAddress: '',
+  };
+
+  /**
+   * updateDriverLocation
+   *
+   * updates driver's location on the server
+   */
+  updateDriverLocation = () => {
+    axios.defaults.headers.common['Authorization'] = `Bearer ${this.state.userToken}`;
+    axios.defaults.headers.common['Content-Type'] = 'application/json';
+
+    axios.put('https://moov-backend-staging.herokuapp.com/api/v1/driver?', {
+      "location_latitude": this.state.myLocationLatitude,
+      "location_longitude": this.state.myLocationLongitude
+    })
+      .then((response) => {
+        console.log(response.data.data);
+        this.saveUserToLocalStorage(response.data.data.driver);
+      })
+      .catch((error) => {
+        console.log(error.response.data);
+      });
+  };
+
+  /**
+   * saveUserToLocalStorage
+   *
+   * Saves user details to local storage
+   * @param userDetails
+   */
+  saveUserToLocalStorage = (driverDetails) => {
+    console.log('here');
+    AsyncStorage.setItem('user', JSON.stringify(driverDetails));
   };
 
   /**
@@ -96,14 +138,38 @@ class RequestPage extends React.Component {
   getMyLocation = () => {
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        console.log("wokeeey");
-        console.log(position);
-        // this.getUserLocationUsingRN();
+        this.getUserLocationUsingRN();
       },
       (error) => this.setState({ error: error.message }),
       { enableHighAccuracy: true, timeout: 200000, maximumAge: 1000 },
     );
     this.watchLocation();
+  };
+
+  /**
+   * getUserLocationUsingRN
+   *
+   * gets user location and sets the state
+   */
+  getUserLocationUsingRN = () => {
+    RNGooglePlaces.getCurrentPlace()
+      .then((results) => {
+        console.log(results, 'Hello world');
+        console.log(results[results.length - (results.length - 1)]);
+
+        this.setState({
+          myLocationLatitude: results[results.length - (results.length - 1)].latitude,
+          myLocationLongitude: results[results.length - (results.length - 1)].longitude,
+          myLocationName: results[results.length - (results.length - 1)].name,
+          myLocationAddress: results[results.length - (results.length - 1)].address,
+          error: null,
+        });
+        this.updateDriverLocation()
+      })
+      .catch((error) => {
+        console.log(error.message);
+        this.getMyLocation();
+      });
   };
 
   /**
@@ -116,6 +182,7 @@ class RequestPage extends React.Component {
     this.watchId = navigator.geolocation.watchPosition(
       (position) => {
         console.log(position);
+        this.getUserLocationUsingRN();
         this.setState({
           latitude: position.coords.latitude,
           longitude: position.coords.longitude,
@@ -147,6 +214,39 @@ class RequestPage extends React.Component {
             size = "large"
             style={activityIndicator}
           />
+        </View>
+      );
+    }
+
+    // FETCHING YOUR LOCATION
+    if (this.state.myLocationLongitude === null) {
+      return (
+        <View style={{flex: 1,justifyContent: 'center', backgroundColor: 'white'}}>
+          <StatusBarComponent backgroundColor='#fff' barStyle="dark-content" />
+          <Text>kjldjfljdlfjdlfjldlfjdlfjljf</Text>
+          {/*<Card*/}
+            {/*title='FETCHING YOUR LOCATION'*/}
+            {/*image={require('../../assets/scene-02.gif')}>*/}
+            {/*<View style={{ flexDirection: 'row', marginTop: 20}}>*/}
+              {/*<ActivityIndicator*/}
+                {/*color = '#004a80'*/}
+                {/*size = "large"*/}
+                {/*style={activityIndicator}*/}
+              {/*/>*/}
+            {/*</View>*/}
+            {/*<View style={{marginBottom: 10, alignItems: 'center', marginTop: 20}}>*/}
+              {/*{*/}
+                {/*(Platform.OS === 'ios')*/}
+                  {/*? <Caption>Grant location permission to MOOV then close and re-open app.</Caption>*/}
+                  {/*: <View>*/}
+                    {/*<Caption>Search on Google for 'Google Play Services'</Caption>*/}
+                    {/*<Caption>download or update then close and re-open app.</Caption>*/}
+                  {/*</View>*/}
+              {/*}*/}
+            {/*</View>*/}
+            {/*<Text style={{marginBottom: 10}}>*/}
+            {/*</Text>*/}
+          {/*</Card>*/}
         </View>
       );
     }

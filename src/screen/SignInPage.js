@@ -154,7 +154,6 @@ class SignInPage extends React.Component {
    * @param userDetails
    */
   saveUserToLocalStorage = (userDetails) => {
-    console.log('here');
     AsyncStorage.setItem('user', JSON.stringify(userDetails.data));
     AsyncStorage.setItem("token", userDetails.token).then(() => {
       this.appNavigator();

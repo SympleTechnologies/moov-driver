@@ -18,6 +18,7 @@ import Toast from 'react-native-simple-toast';
 import RNGooglePlaces from 'react-native-google-places';
 import axios from 'axios';
 import { Icon } from 'react-native-elements';
+import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
 
 // common
 import {StatusBarComponent} from "../common";
@@ -196,7 +197,7 @@ class RequestPage extends React.Component {
   render() {
     console.log(this.state);
 
-    const { container, activityIndicator } = styles;
+    const { container, activityIndicator, map } = styles;
     let { height } = Dimensions.get('window');
 
     if(this.state.isValidPhoneNumber === false) {
@@ -253,6 +254,17 @@ class RequestPage extends React.Component {
     return (
       <View style={container}>
         <Text>Welcome to your requests page</Text>
+        <MapView
+          style={[StyleSheet.absoluteFillObject, map]}
+          provider={PROVIDER_GOOGLE}
+          region={{
+            latitude: 37.78825,
+            longitude: -122.4324,
+            latitudeDelta: 0.015,
+            longitudeDelta: 0.0121,
+          }}
+        >
+        </MapView>
       </View>
     )
   }
@@ -265,7 +277,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-
+  map: {
+    ...StyleSheet.absoluteFillObject,
+  },
 });
 
 export { RequestPage };

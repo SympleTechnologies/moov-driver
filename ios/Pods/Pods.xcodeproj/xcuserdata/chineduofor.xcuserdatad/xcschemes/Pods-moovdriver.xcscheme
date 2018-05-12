@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3449ABE50B2562099863A2CEFBE4486D"
+               BlueprintIdentifier = "2F6CED9AE79BE529686CA072D05317D8"
                BlueprintName = "Pods-moovdriver"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "libPods-moovdriver.a">

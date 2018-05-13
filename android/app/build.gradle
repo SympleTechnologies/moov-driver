@@ -137,6 +137,8 @@ android {
 }
 
 dependencies {
+    implementation project(':react-native-maps')
+    compile project(':react-native-google-places')
     implementation project(':react-native-photo-view')
     implementation project(':react-native-linear-gradient')
     implementation project(':react-native-vector-icons')

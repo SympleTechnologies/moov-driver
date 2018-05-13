@@ -25,6 +25,7 @@
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		156478515CC1473D8FD44E00 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4D238BB9D754E51948AAF9D /* Rubik-Italic.ttf */; };
+		16BE50BE7091269A189B6843 /* libPods-moovdriverTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EFCA1121D5162D992BF47A77 /* libPods-moovdriverTests.a */; };
 		2334B8D3D2004512A456FE45 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC5BBD50F9C54FD19C75341A /* Rubik-Bold.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -55,13 +56,17 @@
 		BA6A3BEE3DEC4C9AA80B183B /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2DB813B7E7284D4E9C285AAB /* Rubik-BoldItalic.ttf */; };
 		BD14980495CF4DCEAD2A1A9F /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4349010EB6C34413828D1E58 /* Entypo.ttf */; };
 		CB432A0A94814FAEADB4BED1 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAB234415BC748EB8DADFDCE /* SimpleLineIcons.ttf */; };
+		D50FA0CB13917EB6C8826E93 /* libPods-moovdriver-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1108E6C100E54D5005956A0A /* libPods-moovdriver-tvOSTests.a */; };
 		DABEEE4D1BDE44BCA092B9DE /* libRNVectorIcons.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 91522EBAB1F94E5F9A7C7482 /* libRNVectorIcons.a */; };
 		DBA431C864274F01914133E0 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8E9730BEE7DF43618D7DA3BD /* Zocial.ttf */; };
 		DF8511B138C94ED7B4BBED2D /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D7E88B5CC5674E658544DEA9 /* MaterialIcons.ttf */; };
 		E1C62F891BF64FF3A2A23130 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0C0D18FB888D416090185D6C /* MaterialCommunityIcons.ttf */; };
+		EB2EAAA600F3DFE800C5B6AB /* libPods-moovdriver-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E42A725D4C2D071ADCE8306 /* libPods-moovdriver-tvOS.a */; };
 		F1CBFE7FFDE043DFA4B30210 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C68A286D77D49E2910133D3 /* FontAwesome.ttf */; };
 		F2E06AA7C29543AF9E725593 /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9EBE51BD467A4B2F8F91492E /* Rubik-LightItalic.ttf */; };
+		F7EB84DB20A63C0700884412 /* libRNGooglePlaces.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7EB84D820A63BD500884412 /* libRNGooglePlaces.a */; };
 		FC3FCB773F03435DA689125E /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3E98E56B4C584673B98BDBB9 /* Octicons.ttf */; };
+		FE24094418030E9C667F1E0A /* libPods-moovdriver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D52F9C59AC47F7325D1567 /* libPods-moovdriver.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -366,6 +371,13 @@
 			remoteGlobalIDString = 15209BEF1D250F63000D0F44;
 			remoteInfo = LRDRCTSimpleToast;
 		};
+		F7EB84D720A63BD500884412 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F7EB84AC20A63BD300884412 /* RNGooglePlaces.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 134814201AA4EA6300B7C361;
+			remoteInfo = RNGooglePlaces;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -380,6 +392,7 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* moovdriverTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = moovdriverTests.m; sourceTree = "<group>"; };
 		0C0D18FB888D416090185D6C /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		1108E6C100E54D5005956A0A /* libPods-moovdriver-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-moovdriver-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* moovdriver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = moovdriver.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -398,8 +411,12 @@
 		34B53FF9C22E47B48A24BA95 /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/@shoutem/ui/fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
 		3BFED7FA06FB4FB7A86BA220 /* RNPhotoView.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNPhotoView.xcodeproj; path = "../node_modules/react-native-photo-view/ios/RNPhotoView.xcodeproj"; sourceTree = "<group>"; };
 		3E98E56B4C584673B98BDBB9 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		40583ADE760A8D4DAAA8C7FC /* Pods-moovdriverTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moovdriverTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-moovdriverTests/Pods-moovdriverTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4349010EB6C34413828D1E58 /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		46D52F9C59AC47F7325D1567 /* libPods-moovdriver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-moovdriver.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EC4AC453BC9CC44B52DB885 /* Pods-moovdriverTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moovdriverTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-moovdriverTests/Pods-moovdriverTests.release.xcconfig"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		6E42A725D4C2D071ADCE8306 /* libPods-moovdriver-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-moovdriver-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
 		846EAB04E80647458E049338 /* Rubik-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Black.ttf"; path = "../node_modules/@shoutem/ui/fonts/Rubik-Black.ttf"; sourceTree = "<group>"; };
@@ -411,19 +428,27 @@
 		91522EBAB1F94E5F9A7C7482 /* libRNVectorIcons.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNVectorIcons.a; sourceTree = "<group>"; };
 		9D878884AD64445FAF1AE83A /* libBVLinearGradient.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libBVLinearGradient.a; sourceTree = "<group>"; };
 		9EBE51BD467A4B2F8F91492E /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-LightItalic.ttf"; path = "../node_modules/@shoutem/ui/fonts/Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
+		A05726D3072FD830A5988250 /* Pods-moovdriver-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moovdriver-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-moovdriver-tvOSTests/Pods-moovdriver-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A0B9D33DC21A440CB4C946F7 /* libRNPhotoView.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNPhotoView.a; sourceTree = "<group>"; };
 		A4D238BB9D754E51948AAF9D /* Rubik-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Italic.ttf"; path = "../node_modules/@shoutem/ui/fonts/Rubik-Italic.ttf"; sourceTree = "<group>"; };
 		AC5BBD50F9C54FD19C75341A /* Rubik-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Bold.ttf"; path = "../node_modules/@shoutem/ui/fonts/Rubik-Bold.ttf"; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		AFE6E2978A044827B18A0848 /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		B882F0D1E5015E5254A86AEB /* Pods-moovdriver-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moovdriver-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-moovdriver-tvOSTests/Pods-moovdriver-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		B968F9636F15E8C6FA15BF87 /* Pods-moovdriver.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moovdriver.debug.xcconfig"; path = "Pods/Target Support Files/Pods-moovdriver/Pods-moovdriver.debug.xcconfig"; sourceTree = "<group>"; };
 		BAB234415BC748EB8DADFDCE /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
 		BE8E6364134B4FE5BDD575BB /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-BlackItalic.ttf"; path = "../node_modules/@shoutem/ui/fonts/Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
+		BFA9B0779C33676A502F7343 /* Pods-moovdriver-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moovdriver-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-moovdriver-tvOS/Pods-moovdriver-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		C7833E36220840F59C34A065 /* LRDRCTSimpleToast.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = LRDRCTSimpleToast.xcodeproj; path = "../node_modules/react-native-simple-toast/ios/LRDRCTSimpleToast.xcodeproj"; sourceTree = "<group>"; };
 		D7E88B5CC5674E658544DEA9 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
+		D83CCAC8A3D08FD0687E9417 /* Pods-moovdriver-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moovdriver-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-moovdriver-tvOS/Pods-moovdriver-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		DC85973848F24392A0689654 /* libLRDRCTSimpleToast.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libLRDRCTSimpleToast.a; sourceTree = "<group>"; };
 		DEEBDC78030244098AA7371E /* Rubik-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Regular.ttf"; path = "../node_modules/@shoutem/ui/fonts/Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		E191E0739CC24B11A75B187A /* Rubik-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Light.ttf"; path = "../node_modules/@shoutem/ui/fonts/Rubik-Light.ttf"; sourceTree = "<group>"; };
+		EFCA1121D5162D992BF47A77 /* libPods-moovdriverTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-moovdriverTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EEED76BE5F4A3CBEA05347 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Medium.ttf"; path = "../node_modules/@shoutem/ui/fonts/Rubik-Medium.ttf"; sourceTree = "<group>"; };
+		F7EB84AC20A63BD300884412 /* RNGooglePlaces.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNGooglePlaces.xcodeproj; path = "../node_modules/react-native-google-places/ios/RNGooglePlaces.xcodeproj"; sourceTree = "<group>"; };
+		FE957380CB84D6100E2BBD5B /* Pods-moovdriver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-moovdriver.release.xcconfig"; path = "Pods/Target Support Files/Pods-moovdriver/Pods-moovdriver.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -432,6 +457,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
+				16BE50BE7091269A189B6843 /* libPods-moovdriverTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -451,11 +477,13 @@
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
+				F7EB84DB20A63C0700884412 /* libRNGooglePlaces.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				DABEEE4D1BDE44BCA092B9DE /* libRNVectorIcons.a in Frameworks */,
 				6193A7E6AA8F4C44995629CB /* libBVLinearGradient.a in Frameworks */,
 				3CA78EB1D6BD4E76B46385BB /* libRNPhotoView.a in Frameworks */,
 				83870C5818A948DAB34F763B /* libLRDRCTSimpleToast.a in Frameworks */,
+				FE24094418030E9C667F1E0A /* libPods-moovdriver.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +499,7 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
+				EB2EAAA600F3DFE800C5B6AB /* libPods-moovdriver-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +507,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D50FA0CB13917EB6C8826E93 /* libPods-moovdriver-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -571,6 +601,21 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		1170B9CA79BFEA5E34109368 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B968F9636F15E8C6FA15BF87 /* Pods-moovdriver.debug.xcconfig */,
+				FE957380CB84D6100E2BBD5B /* Pods-moovdriver.release.xcconfig */,
+				D83CCAC8A3D08FD0687E9417 /* Pods-moovdriver-tvOS.debug.xcconfig */,
+				BFA9B0779C33676A502F7343 /* Pods-moovdriver-tvOS.release.xcconfig */,
+				A05726D3072FD830A5988250 /* Pods-moovdriver-tvOSTests.debug.xcconfig */,
+				B882F0D1E5015E5254A86AEB /* Pods-moovdriver-tvOSTests.release.xcconfig */,
+				40583ADE760A8D4DAAA8C7FC /* Pods-moovdriverTests.debug.xcconfig */,
+				4EC4AC453BC9CC44B52DB885 /* Pods-moovdriverTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		139105B71AF99BAD00B5F7CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -632,6 +677,10 @@
 			isa = PBXGroup;
 			children = (
 				2D16E6891FA4F8E400B85C8A /* libReact.a */,
+				46D52F9C59AC47F7325D1567 /* libPods-moovdriver.a */,
+				6E42A725D4C2D071ADCE8306 /* libPods-moovdriver-tvOS.a */,
+				1108E6C100E54D5005956A0A /* libPods-moovdriver-tvOSTests.a */,
+				EFCA1121D5162D992BF47A77 /* libPods-moovdriverTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -657,6 +706,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				F7EB84AC20A63BD300884412 /* RNGooglePlaces.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -696,6 +746,7 @@
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				10A69495622F48FDBFB617E0 /* Resources */,
 				F703574920876D9000758270 /* Recovered References */,
+				1170B9CA79BFEA5E34109368 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -765,6 +816,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		F7EB84AD20A63BD300884412 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7EB84D820A63BD500884412 /* libRNGooglePlaces.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -772,9 +831,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "moovdriverTests" */;
 			buildPhases = (
+				1AB194F2DF4502BDB7CD3F86 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				0205AC65C1F9D420B1F8364A /* [CP] Embed Pods Frameworks */,
+				FF112CB770467511199BB4ED /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -790,10 +852,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "moovdriver" */;
 			buildPhases = (
+				E7E89FC516FA77A4E095166F /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				ABD642CF3191778A0FD0FFD5 /* [CP] Embed Pods Frameworks */,
+				356B3AF6683E2318CB22A9C4 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -808,10 +873,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "moovdriver-tvOS" */;
 			buildPhases = (
+				FA182A9AE0F8C0D871D25DBC /* [CP] Check Pods Manifest.lock */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
 				2D02E4791E0B4A5D006451C7 /* Resources */,
 				2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */,
+				AC2B3FDEB017CCA81966F6E1 /* [CP] Embed Pods Frameworks */,
+				CF9634DE23C17E75B5DA4E6D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -826,9 +894,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "moovdriver-tvOSTests" */;
 			buildPhases = (
+				D2CD56B609C6CA78650E692D /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
+				D6181A606921A9ED0BE8D1C9 /* [CP] Embed Pods Frameworks */,
+				44A63F8C1319320CF4DFEA1F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -931,6 +1002,10 @@
 				{
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
+				},
+				{
+					ProductGroup = F7EB84AD20A63BD300884412 /* Products */;
+					ProjectRef = F7EB84AC20A63BD300884412 /* RNGooglePlaces.xcodeproj */;
 				},
 				{
 					ProductGroup = F703578320876D9300758270 /* Products */;
@@ -1239,6 +1314,13 @@
 			remoteRef = F70357C82087857700758270 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		F7EB84D820A63BD500884412 /* libRNGooglePlaces.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNGooglePlaces.a;
+			remoteRef = F7EB84D720A63BD500884412 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -1311,6 +1393,39 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
 		};
+		0205AC65C1F9D420B1F8364A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moovdriverTests/Pods-moovdriverTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1AB194F2DF4502BDB7CD3F86 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-moovdriverTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1324,6 +1439,172 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+		};
+		356B3AF6683E2318CB22A9C4 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-moovdriver/Pods-moovdriver-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moovdriver/Pods-moovdriver-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44A63F8C1319320CF4DFEA1F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moovdriver-tvOSTests/Pods-moovdriver-tvOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABD642CF3191778A0FD0FFD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moovdriver/Pods-moovdriver-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC2B3FDEB017CCA81966F6E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moovdriver-tvOS/Pods-moovdriver-tvOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CF9634DE23C17E75B5DA4E6D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moovdriver-tvOS/Pods-moovdriver-tvOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2CD56B609C6CA78650E692D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-moovdriver-tvOSTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D6181A606921A9ED0BE8D1C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moovdriver-tvOSTests/Pods-moovdriver-tvOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7E89FC516FA77A4E095166F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-moovdriver-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA182A9AE0F8C0D871D25DBC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-moovdriver-tvOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF112CB770467511199BB4ED /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moovdriverTests/Pods-moovdriverTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1392,6 +1673,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40583ADE760A8D4DAAA8C7FC /* Pods-moovdriverTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1426,6 +1708,7 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4EC4AC453BC9CC44B52DB885 /* Pods-moovdriverTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
@@ -1457,6 +1740,7 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B968F9636F15E8C6FA15BF87 /* Pods-moovdriver.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1482,6 +1766,7 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE957380CB84D6100E2BBD5B /* Pods-moovdriver.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
@@ -1506,6 +1791,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D83CCAC8A3D08FD0687E9417 /* Pods-moovdriver-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1546,6 +1832,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BFA9B0779C33676A502F7343 /* Pods-moovdriver-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1586,6 +1873,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A05726D3072FD830A5988250 /* Pods-moovdriver-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1614,6 +1902,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B882F0D1E5015E5254A86AEB /* Pods-moovdriver-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;

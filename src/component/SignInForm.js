@@ -41,7 +41,7 @@ const SignInFormPage =
             secureTextEntry
             value={passwordValue} />
         </View>
-        <View style={{ height: height / 15, marginTop: 20, alignItems: 'center', flexDirection: 'column'}}>
+        <View style={{ height: height / 10, marginTop: 20, alignItems: 'center', flexDirection: 'column'}}>
           <View>
             <TouchableOpacity style={{ alignItems: 'center'}} onPress={onSubmit}>
               <Text

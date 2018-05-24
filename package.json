@@ -2,6 +2,11 @@
   "name": "moov-driver",
   "version": "0.1.0",
   "private": true,
+  "rnpm": {
+    "assets": [
+      "./assets/fonts"
+    ]
+  },
   "devDependencies": {
     "babel-preset-react-native-stage-0": "^1.0.1",
     "jest": "^22.4.3",
@@ -18,8 +23,10 @@
     "preset": "react-native"
   },
   "dependencies": {
+    "@expo/vector-icons": "^6.3.1",
     "@shoutem/ui": "^0.23.4",
     "axios": "^0.18.0",
+    "native-base": "^2.4.5",
     "react": "16.3.0-alpha.1",
     "react-native": "0.54.1",
     "react-native-elements": "0.19.1",

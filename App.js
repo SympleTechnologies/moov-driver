@@ -3,14 +3,15 @@ import React from 'react';
 
 // third-libraries
 import { StackNavigator } from 'react-navigation';
+import { Root } from 'native-base';
 
 // screens
-import { LandingPage, SignInPage, SignUpPage, MoovPages } from './src/screen';
+import { LandingPage, SignInPage, MoovPages } from './src/screen';
 
 // component
-import { SignUpScreenTwo, SignUpScreenThree } from './src/component/SignUp';
+import {FinalPage, FirstPage, SecondPage} from "./src/component/Registration";
 
-export default MainStack = StackNavigator({
+const AppNavigator = StackNavigator({
   LandingPage: {
     screen: LandingPage,
     navigationOptions: {
@@ -23,20 +24,20 @@ export default MainStack = StackNavigator({
       header: null,
     }
   },
-  SignUpPage: {
-    screen: SignUpPage,
+  FirstPage: {
+    screen: FirstPage,
     navigationOptions: {
       header: null,
     }
   },
-  SignUpScreenTwo: {
-    screen: SignUpScreenTwo,
+  SecondPage: {
+    screen: SecondPage,
     navigationOptions: {
       header: null,
     }
   },
-  SignUpScreenThree: {
-    screen: SignUpScreenThree,
+  FinalPage: {
+    screen: FinalPage,
     navigationOptions: {
       header: null,
     }
@@ -52,3 +53,8 @@ export default MainStack = StackNavigator({
     header: 'screen',
   }
 });
+
+export default () =>
+  <Root>
+    <AppNavigator />
+  </Root>;

@@ -40,6 +40,12 @@
 	<false/>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string/>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string/>
+	<key>NSLocationUsageDescription</key>
+	<string/>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>
@@ -74,6 +80,10 @@
 		<string>Rubik-Medium.ttf</string>
 		<string>Rubik-MediumItalic.ttf</string>
 		<string>Rubik-Regular.ttf</string>
+		<string>GothamRoundedBold_21016.ttf</string>
+		<string>GothamRoundedBook_21018.ttf</string>
+		<string>GothamRoundedLight_21020.ttf</string>
+		<string>GothamRoundedMedium_21022.ttf</string>
 	</array>
 </dict>
 </plist>

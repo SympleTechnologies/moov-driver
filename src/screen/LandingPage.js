@@ -3,10 +3,19 @@ import React from 'react';
 
 // react-native libraries
 import {
-  StyleSheet, Text, View, Dimensions, Animated, TouchableOpacity, ActivityIndicator, Platform,
+  Dimensions,
+  Animated,
+  TouchableOpacity,
+  Platform,
+  ImageBackground,
+  Image,
   AsyncStorage
 } from 'react-native';
 
+// third-party libraries
+import { Container, Content } from 'native-base';
+
+// common
 import { StatusBarComponent } from "../common";
 
 class LandingPage extends React.Component {
@@ -27,6 +36,11 @@ class LandingPage extends React.Component {
   componentDidMount() {
     const { navigate } = this.props.navigation;
     this.spring();
+    // AsyncStorage.getItem("user").then((value) => {
+    //   if(value !== null) {
+    //     navigate('MoovPages');
+    //   }
+    // }).done();
   }
 
   /**
@@ -49,51 +63,60 @@ class LandingPage extends React.Component {
   /**
    * appNavigation
    *
-   * @param {string} page - The page the user wants to navigate to
+   * Navigates user to SignIn page
    * @return {void}
    */
   appNavigation = () => {
-    console.log('Was clicked');
     const { navigate } = this.props.navigation;
     navigate('SignInPage');
   };
 
   render() {
     console.log(this.state, 'Entire state');
-    const {
-      container,
-    } = styles;
     let { height, width } = Dimensions.get('window');
 
     return (
-      <View style={container}>
+      <Container>
         <StatusBarComponent backgroundColor='#fff' barStyle="dark-content" />
-        <View style={{ alignItems: 'center'}}>
+        <ImageBackground
+          style={{
+            height: height,
+            width: width,
+            flex: 1
+          }}
+          source={require('../../assets/moovBG2.png')}
+        >
+          <Content contentContainerStyle={{ alignItems: 'center'}}>
+            <TouchableOpacity onPress={this.appNavigation}>
+              <Animated.Image
+                style={{
+                  alignItems: 'center',
+                  height: height / 5.5,
+                  width: width / 3,
+                  marginTop: height / 10,
+                  transform: [{scale: this.springValue}],
+                  borderRadius: 25
+                }}
+                source={require('../../assets/appLogo.png')}
+              />
+            </TouchableOpacity>
+          </Content>
+          <Content/>
           <TouchableOpacity onPress={this.appNavigation}>
-            <Animated.Image
+            <Image
+              styleName="medium"
               style={{
-                alignItems: 'center',
-                height: height / 3.5,
-                width: width / 2,
-                transform: [{scale: this.springValue}],
-                borderRadius: 25
+                marginLeft: Platform.OS === 'ios' ? width / 4 : width / 3.3,
+                height: Platform.OS === 'ios' ? 90 :  height / 7.3,
+                width:  Platform.OS === 'ios' ? 270 : width / 1.5,
               }}
-              source={require('../../assets/appLogo.png')}
+              source={require('../../assets/moov-car-side.png')}
             />
           </TouchableOpacity>
-        </View>
-      </View>
+        </ImageBackground>
+      </Container>
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'white',
-    justifyContent: 'center',
-    height: Dimensions.get('window').height
-  },
-});
 
 export { LandingPage };

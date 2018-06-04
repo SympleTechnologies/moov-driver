@@ -56,6 +56,9 @@
 		63CF39A4A3154B91A54F34B5 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 48A8A1FE338847D0A344DBAD /* Zocial.ttf */; };
 		65D4B9C682564FABACF2C2CF /* GothamRoundedBold_21016.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A38A3F71A7824504B76C9D0D /* GothamRoundedBold_21016.ttf */; };
 		6C4679704779409682EEB8F7 /* GothamRounded-Book.otf in Resources */ = {isa = PBXBuildFile; fileRef = 103633AA42F645B5AA98B728 /* GothamRounded-Book.otf */; };
+		6E12FE5520C5AE4500BB8FD9 /* Mapbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E12FE2820C5AE4500BB8FD9 /* Mapbox.framework */; };
+		6E12FE5620C5AE4500BB8FD9 /* Mapbox.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6E12FE2820C5AE4500BB8FD9 /* Mapbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		6E12FE5E20C5AE7200BB8FD9 /* libRCTMGL.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E12FE5D20C5AE6500BB8FD9 /* libRCTMGL.a */; };
 		75F30ACBE3D7432CBA01D591 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A6884AF7957740D18A76D682 /* Roboto.ttf */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		83870C5818A948DAB34F763B /* libLRDRCTSimpleToast.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC85973848F24392A0689654 /* libLRDRCTSimpleToast.a */; };
@@ -280,6 +283,13 @@
 			remoteGlobalIDString = 2D2A28201D9B03D100D4039D;
 			remoteInfo = "RCTAnimation-tvOS";
 		};
+		6E12FE5C20C5AE6500BB8FD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6E12FE5820C5AE6400BB8FD9 /* RCTMGL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C4D1443D1F4E16F600396F26;
+			remoteInfo = RCTMGL;
+		};
 		6E3DD0DF20C4FF700050245C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 14486D55169B4A3DB82FED26 /* RNGooglePlaces.xcodeproj */;
@@ -408,6 +418,20 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6E12FE5720C5AE4500BB8FD9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6E12FE5620C5AE4500BB8FD9 /* Mapbox.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
 		00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTActionSheet.xcodeproj; path = "../node_modules/react-native/Libraries/ActionSheetIOS/RCTActionSheet.xcodeproj"; sourceTree = "<group>"; };
@@ -455,6 +479,8 @@
 		546C67B75BB14F84894132B4 /* GothamRounded-BoldItalic.otf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "GothamRounded-BoldItalic.otf"; path = "../assets/fonts/GothamRounded-BoldItalic.otf"; sourceTree = "<group>"; };
 		596BB4BD9FCB42CBA724051A /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
+		6E12FE2820C5AE4500BB8FD9 /* Mapbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Mapbox.framework; path = "../node_modules/@mapbox/react-native-mapbox-gl/ios/Mapbox.framework"; sourceTree = "<group>"; };
+		6E12FE5820C5AE6400BB8FD9 /* RCTMGL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTMGL.xcodeproj; path = "../node_modules/@mapbox/react-native-mapbox-gl/ios/RCTMGL.xcodeproj"; sourceTree = "<group>"; };
 		6E42A725D4C2D071ADCE8306 /* libPods-moovdriver-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-moovdriver-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		7F7D08DCC843425082A8CC02 /* GothamRoundedMedium_21022.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = GothamRoundedMedium_21022.ttf; path = ../assets/fonts/GothamRoundedMedium_21022.ttf; sourceTree = "<group>"; };
@@ -518,6 +544,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6E12FE5E20C5AE7200BB8FD9 /* libRCTMGL.a in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
@@ -532,6 +559,7 @@
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				F7EB84DB20A63C0700884412 /* libRNGooglePlaces.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				6E12FE5520C5AE4500BB8FD9 /* Mapbox.framework in Frameworks */,
 				DABEEE4D1BDE44BCA092B9DE /* libRNVectorIcons.a in Frameworks */,
 				6193A7E6AA8F4C44995629CB /* libBVLinearGradient.a in Frameworks */,
 				3CA78EB1D6BD4E76B46385BB /* libRNPhotoView.a in Frameworks */,
@@ -770,6 +798,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6E12FE5920C5AE6400BB8FD9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6E12FE5D20C5AE6500BB8FD9 /* libRCTMGL.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		6E3DD0DC20C4FF700050245C /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -798,6 +834,7 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				6E12FE5820C5AE6400BB8FD9 /* RCTMGL.xcodeproj */,
 				F7EB84AC20A63BD300884412 /* RNGooglePlaces.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
@@ -833,6 +870,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				6E12FE2820C5AE4500BB8FD9 /* Mapbox.framework */,
 				13B07FAE1A68108700A75B9A /* moovdriver */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* moovdriverTests */,
@@ -954,6 +992,8 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				ABD642CF3191778A0FD0FFD5 /* [CP] Embed Pods Frameworks */,
 				356B3AF6683E2318CB22A9C4 /* [CP] Copy Pods Resources */,
+				6E12FE5720C5AE4500BB8FD9 /* Embed Frameworks */,
+				6E12FE5F20C5AE9400BB8FD9 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1073,6 +1113,10 @@
 				{
 					ProductGroup = 78C398B11ACF4ADC00677621 /* Products */;
 					ProjectRef = 78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */;
+				},
+				{
+					ProductGroup = 6E12FE5920C5AE6400BB8FD9 /* Products */;
+					ProjectRef = 6E12FE5820C5AE6400BB8FD9 /* RCTMGL.xcodeproj */;
 				},
 				{
 					ProductGroup = 00C302D41ABCB9D200DB3ED1 /* Products */;
@@ -1310,6 +1354,13 @@
 			fileType = archive.ar;
 			path = libRCTAnimation.a;
 			remoteRef = 5E9157341DD0AC6500FF2AA8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		6E12FE5D20C5AE6500BB8FD9 /* libRCTMGL.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRCTMGL.a;
+			remoteRef = 6E12FE5C20C5AE6500BB8FD9 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		6E3DD0E020C4FF700050245C /* libRNGooglePlaces.a */ = {
@@ -1607,6 +1658,19 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-moovdriver-tvOSTests/Pods-moovdriver-tvOSTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6E12FE5F20C5AE9400BB8FD9 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework/strip-frameworks.sh";
+		};
 		ABD642CF3191778A0FD0FFD5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1881,6 +1945,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/GoogleMaps/Base/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleMaps/Maps/Frameworks\"",
+					"\"${PODS_ROOT}/GooglePlacePicker/Frameworks\"",
+					"\"${PODS_ROOT}/GooglePlaces/Frameworks\"",
+					"$(PROJECT_DIR)/../node_modules/@mapbox/react-native-mapbox-gl/ios",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",
@@ -1908,6 +1980,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/GoogleMaps/Base/Frameworks\"",
+					"\"${PODS_ROOT}/GoogleMaps/Maps/Frameworks\"",
+					"\"${PODS_ROOT}/GooglePlacePicker/Frameworks\"",
+					"\"${PODS_ROOT}/GooglePlaces/Frameworks\"",
+					"$(PROJECT_DIR)/../node_modules/@mapbox/react-native-mapbox-gl/ios",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-vector-icons/RNVectorIconsManager",

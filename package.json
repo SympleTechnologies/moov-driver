@@ -23,6 +23,7 @@
     "preset": "react-native"
   },
   "dependencies": {
+    "@mapbox/react-native-mapbox-gl": "^6.1.2-beta2",
     "@shoutem/ui": "^0.23.4",
     "axios": "^0.18.0",
     "native-base": "^2.4.5",

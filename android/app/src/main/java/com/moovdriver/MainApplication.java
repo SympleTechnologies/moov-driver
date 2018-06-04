@@ -38,6 +38,7 @@ import com.facebook.soloader.SoLoader;
 
 import java.util.Arrays;
 import java.util.List;
+import com.mapbox.rctmgl.RCTMGLPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -54,7 +55,8 @@ public class MainApplication extends Application implements ReactApplication {
             new VectorIconsPackage(),
             new RNGooglePlacesPackage(),
             new PhotoViewPackage(),
-            new LinearGradientPackage()
+            new LinearGradientPackage(),
+            new RCTMGLPackage()
       );
     }
 

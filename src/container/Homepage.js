@@ -17,14 +17,17 @@ import {
 import Toast from 'react-native-simple-toast';
 import RNGooglePlaces from 'react-native-google-places';
 import axios from 'axios';
-import { Icon } from 'react-native-elements';
-import { Root, Drawer } from 'native-base';
+import { Root, Drawer, Segment, Button, Content } from 'native-base';
+import Mapbox from '@mapbox/react-native-mapbox-gl';
 
 // component
 import { HeaderComponent, SideBar } from "../component/Header";
 
 // common
 import { StatusBarComponent } from "../common";
+import {Current, Pending} from "../component/Homepage";
+
+Mapbox.setAccessToken('pk.eyJ1IjoibW9vdiIsImEiOiJjamhrcnB2bzcycmt1MzZvNmw5eTIxZW9mIn0.3fn0qfWAXnou1v500tRRZA');
 
 class Homepage extends React.Component {
 	constructor(){
@@ -39,6 +42,7 @@ class Homepage extends React.Component {
 		myLocationLongitude: null,
 		myLocationName: '',
 		myLocationAddress: '',
+		currentTab: 'Pending'
 	};
 	
 	/**
@@ -215,11 +219,65 @@ class Homepage extends React.Component {
 		this.drawer._root.open()
 	};
 	
+	/**
+	 * renderAnnotationsForAndroid
+	 *
+	 * Android location problem fixed using temporary location anotation
+	 * @return {*}
+	 */
+	renderAnnotationsForAndroid () {
+		return (
+			<Mapbox.PointAnnotation
+				key='pointAnnotation'
+				id='pointAnnotation'
+				coordinate={this.state.myLocationLatitude !== null ? [this.state.myLocationLongitude, this.state.myLocationLatitude] : [11.254, 43.772]}>
+				
+				<View style={styles.annotationContainer}>
+					<View style={{width: 30,
+						height: 30,
+						borderRadius: 15,
+						backgroundColor: '#057cff',
+						transform: [{ scale: 0.6 }],}}
+					/>
+				</View>
+				<Mapbox.Callout title={`My Location: ${this.state.myLocationAddress}`} />
+			</Mapbox.PointAnnotation>
+		)
+	}
+	
+	/**
+	 * setCurrentTab
+	 *
+	 * sets the state of the current tab as user clicks
+	 * @param {string} currentTab - clicked tab
+	 * @return {void}
+	 */
+	setCurrentTab = (currentTab) => {
+		if(currentTab === 'Pending') {
+			this.setState({ currentTab: 'Pending' });
+		}
+		
+		if(currentTab === 'Current') {
+			this.setState({ currentTab: 'Current' });
+		}
+		
+		if(currentTab === 'Map') {
+			this.setState({ currentTab: 'Map' });
+		}
+	};
+	
+	
 	render() {
 		console.log(this.state);
 		
 		const { container, activityIndicator } = styles;
 		let { height } = Dimensions.get('window');
+		
+		let myLocation = [];
+		
+		if(this.state.myLocationLatitude) {
+			myLocation = [this.state.myLocationLongitude, this.state.myLocationLatitude]
+		}
 		
 		if(this.state.isValidPhoneNumber === false) {
 			Toast.showWithGravity('You have entered an invalid phone number.', Toast.LONG, Toast.TOP);
@@ -246,10 +304,81 @@ class Homepage extends React.Component {
 				ref={(ref) => { this.drawer = ref; }}
 				content={<SideBar navigator={this.navigator} />}
 				onClose={() => this.closeDrawer()} >
+				{
+					this.state.currentTab === 'Map'
+						?
+						<View style={StyleSheet.absoluteFillObject}>
+							<Mapbox.MapView
+								styleURL={Mapbox.StyleURL.Light}
+								zoomLevel={15}
+								centerCoordinate={myLocation.length <  1 ? [11.256, 43.770] : myLocation}
+								style={styles.container}
+								showUserLocation={Platform.OS === 'ios'}
+							>
+								{
+									Platform.OS === 'ios' ? <View/> : this.renderAnnotationsForAndroid()
+								}
+							</Mapbox.MapView>
+						</View>
+						:
+						<View/>
+				}
 				<HeaderComponent onPress={() => this.openDrawer()} />
-				<View style={container}>
-					<Text>Welcome to your Homepage</Text>
-				</View>
+				<Segment
+					style={{
+						backgroundColor: this.state.currentTab === 'Map' ? '#f6f6f4' : '#fff',
+					}}
+				>
+					<Button
+						style={{
+							borderWidth: 1,
+							borderColor: '#b3b4b4',
+							backgroundColor: this.state.currentTab === 'Pending' ? '#b3b4b4' : '#fff'
+						}}
+						onPress={() => this.setCurrentTab('Pending')}
+						active={this.state.currentTab === 'Pending'}
+						first>
+						<Text style={{ color: this.state.currentTab === 'Pending' ? '#fff' : '#333' }}>Pending</Text>
+					</Button>
+					<Button
+						style={{
+							borderWidth: 1,
+							borderColor: '#b3b4b4',
+							backgroundColor: this.state.currentTab === 'Current' ? '#b3b4b4' : '#fff'
+						}}
+						active={this.state.currentTab === 'Current'}
+						onPress={() =>this.setCurrentTab('Current')}
+					>
+						<Text style={{ color: this.state.currentTab === 'Current' ? '#fff' : '#333' }}>Current</Text>
+					</Button>
+					<Button
+						style={{
+							borderWidth: 1,
+							borderColor: '#b3b4b4',
+							backgroundColor: this.state.currentTab === 'Map' ? '#b3b4b4' : '#fff'
+						}}
+						active={this.state.currentTab === 'Map'}
+						onPress={() =>this.setCurrentTab('Map')}
+						last>
+						<Text style={{ color: this.state.currentTab === 'Map' ? '#fff' : '#333' }}>Map</Text>
+					</Button>
+				</Segment>
+				<Content>
+					{
+						this.state.currentTab === 'Pending'
+						?
+							<Pending/>
+						:
+							<View/>
+					}
+					{
+						this.state.currentTab === 'Current'
+						?
+							<Current/>
+						:
+							<View/>
+					}
+				</Content>
 			</Drawer>
 		)
 	}
@@ -259,8 +388,6 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: '#fff',
-		alignItems: 'center',
-		justifyContent: 'center',
 	},
 	
 });

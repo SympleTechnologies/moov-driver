@@ -14,10 +14,9 @@ import {
 } from 'react-native';
 
 // third-part library
-import Toast from 'react-native-simple-toast';
 import RNGooglePlaces from 'react-native-google-places';
 import axios from 'axios';
-import { Root, Drawer, Segment, Button, Content } from 'native-base';
+import { Root, Drawer, Segment, Button, Content, Toast } from 'native-base';
 import Mapbox from '@mapbox/react-native-mapbox-gl';
 
 // component
@@ -26,6 +25,7 @@ import { HeaderComponent, SideBar } from "../component/Header";
 // common
 import { StatusBarComponent } from "../common";
 import {Current, Pending} from "../component/Homepage";
+import {Fonts} from "../utils/Font";
 
 Mapbox.setAccessToken('pk.eyJ1IjoibW9vdiIsImEiOiJjamhrcnB2bzcycmt1MzZvNmw5eTIxZW9mIn0.3fn0qfWAXnou1v500tRRZA');
 
@@ -46,39 +46,6 @@ class Homepage extends React.Component {
 	};
 	
 	/**
-	 * updateDriverLocation
-	 *
-	 * updates driver's location on the server
-	 */
-	updateDriverLocation = () => {
-		axios.defaults.headers.common['Authorization'] = `Bearer ${this.state.userToken}`;
-		axios.defaults.headers.common['Content-Type'] = 'application/json';
-		
-		axios.put('https://moov-backend-staging.herokuapp.com/api/v1/driver?', {
-			"location_latitude": this.state.myLocationLatitude,
-			"location_longitude": this.state.myLocationLongitude
-		})
-			.then((response) => {
-				console.log(response.data.data);
-				this.saveUserToLocalStorage(response.data.data.driver);
-			})
-			.catch((error) => {
-				console.log(error.response.data);
-			});
-	};
-	
-	/**
-	 * saveUserToLocalStorage
-	 *
-	 * Saves user details to local storage
-	 * @param userDetails
-	 */
-	saveUserToLocalStorage = (driverDetails) => {
-		console.log('here');
-		AsyncStorage.setItem('user', JSON.stringify(driverDetails));
-	};
-	
-	/**
 	 * componentDidMount
 	 *
 	 * React life-cycle method sets user token
@@ -87,7 +54,7 @@ class Homepage extends React.Component {
 	componentDidMount() {
 		AsyncStorage.getItem("token").then((value) => {
 			this.setState({ userToken: value });
-		}).done();
+		}, () => this.fetchUserDetails()).done();
 		
 		AsyncStorage.getItem("user").then((value) => {
 			this.setState({
@@ -102,11 +69,70 @@ class Homepage extends React.Component {
 		if(Platform.OS === 'android') {
 			this.requestLocationPermission()
 				.then((response) => {
-					console.log(response, 'RESPONSE');
+					// console.log(response, 'RESPONSE');
 				});
-			console.log('Android');
+			// console.log('Android');
 		}
 	}
+	
+	/**
+	 * fetchUserDetails
+	 *
+	 * fetches User transaction from the back end and saves it in local storage
+	 * @param newBalance
+	 * @return {void}
+	 */
+	fetchUserDetails = () => {
+		
+		axios.defaults.headers.common['Authorization'] = `Bearer ${this.state.userToken}`;
+		axios.defaults.headers.common['Content-Type'] = 'application/json';
+		
+		axios.get('https://moov-backend-staging.herokuapp.com/api/v1/user')
+			.then((response) => {
+				console.log(response.data.data);
+				this.setState({
+					user: response.data.data.user,
+				});
+				
+				// Toast.show({ text: "User retrieved successfully !", buttonText: "Okay", type: "success" })
+			})
+			.catch((error) => {
+				// console.log(error.response.data);
+				Toast.show({ text: "Unable to retrieve user", buttonText: "Okay", type: "danger" })
+			});
+	};
+	
+	/**
+	 * updateDriverLocation
+	 *
+	 * updates driver's location on the server
+	 */
+	updateDriverLocation = () => {
+		axios.defaults.headers.common['Authorization'] = `Bearer ${this.state.userToken}`;
+		axios.defaults.headers.common['Content-Type'] = 'application/json';
+		
+		axios.put('https://moov-backend-staging.herokuapp.com/api/v1/driver?', {
+			"location_latitude": this.state.myLocationLatitude,
+			"location_longitude": this.state.myLocationLongitude
+		})
+			.then((response) => {
+				// console.log(response.data.data);
+				this.saveUserToLocalStorage(response.data.data.driver);
+			})
+			.catch((error) => {
+				// console.log(error.response.data);
+			});
+	};
+	
+	/**
+	 * saveUserToLocalStorage
+	 *
+	 * Saves user details to local storage
+	 * @param userDetails
+	 */
+	saveUserToLocalStorage = (driverDetails) => {
+		AsyncStorage.setItem('user', JSON.stringify(driverDetails));
+	};
 	
 	/**
 	 * requestLocationPermission
@@ -125,10 +151,8 @@ class Homepage extends React.Component {
 				}
 			);
 			if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-				console.log("You can use the location");
 				this.getMyLocation();
 			} else {
-				console.log("Location permission denied");
 				this.requestLocationPermission();
 			}
 		} catch (err) {
@@ -161,9 +185,6 @@ class Homepage extends React.Component {
 	getUserLocationUsingRN = () => {
 		RNGooglePlaces.getCurrentPlace()
 			.then((results) => {
-				console.log(results, 'Hello world');
-				console.log(results[results.length - (results.length - 1)]);
-				
 				this.setState({
 					myLocationLatitude: results[results.length - (results.length - 1)].latitude,
 					myLocationLongitude: results[results.length - (results.length - 1)].longitude,
@@ -188,7 +209,6 @@ class Homepage extends React.Component {
 	watchLocation = () => {
 		this.watchId = navigator.geolocation.watchPosition(
 			(position) => {
-				console.log(position);
 				this.getUserLocationUsingRN();
 				this.setState({
 					latitude: position.coords.latitude,
@@ -266,21 +286,28 @@ class Homepage extends React.Component {
 		}
 	};
 	
+	/**
+	 * navigateToProfilePage
+	 *
+	 * navigates to profile page
+	 * @return {void}
+	 */
+	navigateToProfilePage = (page) => {
+		const { navigate } = this.props.navigation;
+		navigate(page);
+	};
+	
 	
 	render() {
 		console.log(this.state);
 		
 		const { container, activityIndicator } = styles;
-		let { height } = Dimensions.get('window');
+		let { height, width } = Dimensions.get('window');
 		
 		let myLocation = [];
 		
 		if(this.state.myLocationLatitude) {
 			myLocation = [this.state.myLocationLongitude, this.state.myLocationLatitude]
-		}
-		
-		if(this.state.isValidPhoneNumber === false) {
-			Toast.showWithGravity('You have entered an invalid phone number.', Toast.LONG, Toast.TOP);
 		}
 		
 		// ACTIVITY INDICATOR
@@ -302,27 +329,8 @@ class Homepage extends React.Component {
 		return (
 			<Drawer
 				ref={(ref) => { this.drawer = ref; }}
-				content={<SideBar navigator={this.navigator} />}
+				content={<SideBar tab={'Homepage'}  navigateToProfilePage={this.navigateToProfilePage} />}
 				onClose={() => this.closeDrawer()} >
-				{
-					this.state.currentTab === 'Map'
-						?
-						<View style={StyleSheet.absoluteFillObject}>
-							<Mapbox.MapView
-								styleURL={Mapbox.StyleURL.Light}
-								zoomLevel={15}
-								centerCoordinate={myLocation.length <  1 ? [11.256, 43.770] : myLocation}
-								style={styles.container}
-								showUserLocation={Platform.OS === 'ios'}
-							>
-								{
-									Platform.OS === 'ios' ? <View/> : this.renderAnnotationsForAndroid()
-								}
-							</Mapbox.MapView>
-						</View>
-						:
-						<View/>
-				}
 				<HeaderComponent onPress={() => this.openDrawer()} />
 				<Segment
 					style={{
@@ -366,19 +374,40 @@ class Homepage extends React.Component {
 				<Content>
 					{
 						this.state.currentTab === 'Pending'
-						?
-							<Pending/>
-						:
+							?
+							<Pending navigateToProfilePage={this.navigateToProfilePage}/>
+							:
 							<View/>
 					}
 					{
 						this.state.currentTab === 'Current'
-						?
+							?
 							<Current/>
-						:
+							:
 							<View/>
 					}
 				</Content>
+				{
+					this.state.currentTab === 'Map'
+						?
+						<View style={{ width: width , backgroundColor: '#fff', height: '100%' }}>
+							<View style={StyleSheet.absoluteFillObject}>
+								<Mapbox.MapView
+									styleURL={Mapbox.StyleURL.Light}
+									zoomLevel={15}
+									centerCoordinate={myLocation.length <  1 ? [11.256, 43.770] : myLocation}
+									style={styles.container}
+									showUserLocation={Platform.OS === 'ios'}
+								>
+									{
+										Platform.OS === 'ios' ? <View/> : this.renderAnnotationsForAndroid()
+									}
+								</Mapbox.MapView>
+							</View>
+						</View>
+						:
+						<View/>
+				}
 			</Drawer>
 		)
 	}

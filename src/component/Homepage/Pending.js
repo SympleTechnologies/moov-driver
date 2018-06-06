@@ -10,15 +10,19 @@ import {
 	ActivityIndicator,
 	AsyncStorage,
 	PermissionsAndroid,
-	Platform
+	Platform,
+	TouchableOpacity
 } from 'react-native';
 
 // third-part library
 import axios from 'axios';
-import { Root, Content, Container } from 'native-base';
+import { Root, Content, Container, Button, Toast } from 'native-base';
 
 // common
 import { StatusBarComponent } from "../../common";
+
+// util
+import { Fonts } from "../../utils/Font";
 
 class Pending extends React.Component {
 	constructor(){
@@ -48,10 +52,64 @@ class Pending extends React.Component {
 		}).done();
 	}
 	
+	/**
+	 * updateDriverLocation
+	 *
+	 * updates driver's location on the server
+	 */
+	updateDriverLocation = () => {
+		axios.defaults.headers.common['Authorization'] = `Bearer ${this.state.userToken}`;
+		axios.defaults.headers.common['Content-Type'] = 'application/json';
+		
+		axios.put('https://moov-backend-staging.herokuapp.com/api/v1/driver?', {
+			"location_latitude": this.state.myLocationLatitude,
+			"location_longitude": this.state.myLocationLongitude
+		})
+			.then((response) => {
+				console.log(response.data.data);
+				this.saveUserToLocalStorage(response.data.data.driver);
+			})
+			.catch((error) => {
+				console.log(error.response.data);
+			});
+	};
+	
+	/**
+	 * onRefresh
+	 *
+	 * Fetches the latest notifications
+	 */
+	onRefresh = () => {
+		this.setState({
+			loading: !this.state.loading
+		});
+		
+		axios.defaults.headers.common['Authorization'] = `Bearer ${this.state.userToken}`;
+		axios.defaults.headers.common['Content-Type'] = 'application/json';
+		
+		axios.get('https://moov-backend-staging.herokuapp.com/api/v1/notification')
+			.then((response) => {
+				console.log(response.data.data)
+				this.setState({
+					notification: response.data.data,
+					notificationsArray: response.data.data.notifications,
+					loading: !this.state.loading
+				})
+			})
+			.catch((error) => {
+				console.log(error.response);
+				Toast.show({ text: `${error.response.data.data.message}`, type: "danger" })
+				this.setState({
+					loading: !this.state.loading
+				})
+			});
+	};
+	
 	render() {
 		console.log(this.state);
 		
 		const { container, activityIndicator } = styles;
+		let { height, width } = Dimensions.get('window');
 		
 		
 		// ACTIVITY INDICATOR
@@ -72,10 +130,50 @@ class Pending extends React.Component {
 		
 		return (
 			<Container style={container}>
-				<Content
-				>
-					<Text>Welcome to your pending rides page</Text>
-				</Content>
+				{
+					this.state.user.admin_confirmed === false || this.state.user.car_model || this.state.user.car_slots
+						?
+							<Content
+								contentContainerStyle={{
+									marginTop: height / 3,
+									flexDirection: 'column',
+									alignItems: 'center',
+									justifyContent: 'center',
+								}}>
+								<Button
+									style={{
+										width: 200,
+										backgroundColor: '#b3b4b4',
+									}}
+									onPress={() => this.props.navigateToProfilePage('Profile')}
+									block
+									dark>
+									<Text style={{ fontWeight: '900', fontFamily: Fonts.GothamRoundedLight }}>Update Profile</Text>
+								</Button>
+							</Content>
+						
+						:
+						
+							<Content
+								contentContainerStyle={{
+									marginTop: 30,
+									flexDirection: 'column',
+									alignItems: 'center',
+									justifyContent: 'center',
+								}}
+							>
+								<Button
+									style={{
+										width: 200,
+										backgroundColor: '#b3b4b4',
+									}}
+									onPress={this.onRefresh}
+									block
+									dark>
+									<Text style={{ fontWeight: '900', fontFamily: Fonts.GothamRoundedLight }}>Refresh Requests</Text>
+								</Button>
+							</Content>
+				}
 			</Container>
 		)
 	}

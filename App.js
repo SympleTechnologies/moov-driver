@@ -9,44 +9,50 @@ import { Root } from 'native-base';
 import { LandingPage, SignInPage } from './src/screen';
 
 // container
-import { Homepage } from "./src/container";
+import { Homepage, Profile } from "./src/container";
 
 // component
 import { FinalPage, FirstPage, SecondPage } from "./src/component/Registration";
 
 const AppNavigator = StackNavigator({
-  // LandingPage: {
-  //   screen: LandingPage,
-  //   navigationOptions: {
-  //     header: null,
-  //   }
-  // },
-  // SignInPage: {
-  //   screen: SignInPage,
-  //   navigationOptions: {
-  //     header: null,
-  //   }
-  // },
-  // FirstPage: {
-	 //  screen: FirstPage,
-	 //  navigationOptions: {
-	 //    header: null,
-	 //  }
-  // },
-  // SecondPage: {
-	 //  screen: SecondPage,
-	 //  navigationOptions: {
-	 //    header: null,
-	 //  }
-  // },
-  // FinalPage: {
-	 //  screen: FinalPage,
-	 //  navigationOptions: {
-	 //    header: null,
-	 //  }
-  // },
+  LandingPage: {
+    screen: LandingPage,
+    navigationOptions: {
+      header: null,
+    }
+  },
+  SignInPage: {
+    screen: SignInPage,
+    navigationOptions: {
+      header: null,
+    }
+  },
+  FirstPage: {
+	  screen: FirstPage,
+	  navigationOptions: {
+	    header: null,
+	  }
+  },
+  SecondPage: {
+	  screen: SecondPage,
+	  navigationOptions: {
+	    header: null,
+	  }
+  },
+  FinalPage: {
+	  screen: FinalPage,
+	  navigationOptions: {
+	    header: null,
+	  }
+  },
 	Homepage: {
     screen: Homepage,
+    navigationOptions: {
+      header: null,
+    }
+  },
+	Profile: {
+    screen: Profile,
     navigationOptions: {
       header: null,
     }

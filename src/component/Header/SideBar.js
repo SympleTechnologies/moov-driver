@@ -1,7 +1,15 @@
+// react library
 import React from "react";
+
+// react-native library
 import { AppRegistry, Image, StatusBar } from "react-native";
+
+// third-party library
 import { Container, Content, Text, List, ListItem } from "native-base";
-const routes = ["Ask","Moov", "Profile", "Transactions", "Wallet"];
+
+// routes
+const routes = ["Ask","Homepage", "Profile", "Transactions", "Wallet"];
+
 class SideBar extends React.Component {
   render() {
     return (
@@ -10,16 +18,19 @@ class SideBar extends React.Component {
       }}>
         <Content
           contentContainerStyle={{
-            marginTop: 50
+            // marginTop: 40
           }}
         >
           <List
+	          style={{
+		          marginTop: 90
+	          }}
             dataArray={routes}
             renderRow={data => {
               return (
                 <ListItem
                   button
-                  onPress={() => this.props.navigation.navigate(data)}>
+                  onPress={() => this.props.tab === data ? '' : this.props.navigateToProfilePage(data)}>
                   <Text>{data}</Text>
                 </ListItem>
               );

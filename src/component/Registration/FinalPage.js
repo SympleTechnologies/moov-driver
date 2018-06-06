@@ -152,40 +152,7 @@ class FinalPage extends Component {
    * Checks for account type, e.g Social auth or email
    */
   checkTypeOfAccount = () => {
-    if(this.state.userAuthID) {
-      this.signUpWithSocialAuth();
-    } else {
-      this.signUpWithEmailAndPassword();
-    }
-  };
-
-  /**
-   * signUpWithSocialAuth
-   *
-   * signs up users using social auth
-   * @return {void}
-   */
-  signUpWithSocialAuth  = () => {
-    axios.post('https://moov-backend-staging.herokuapp.com/api/v1/signup', {
-      "password": this.state.userAuthID,
-      "user_type": "driver",
-      "firstname":  this.state.firstName ,
-      "lastname": this.state.lastName,
-      "email": this.state.socialEmail,
-      "image_url": this.state.imgURL,
-      "mobile_number": this.state.phoneNumber,
-      "school": this.state.selectedSchool,
-      "authentication_type": this.state.authentication_type
-    })
-      .then((response) => {
-        this.setState({ loading: !this.state.loading, userCreated: !this.state.userCreated });
-        this.successMessage(`${response.data.data.message}`)
-        this.saveUserToLocalStorage(response.data.data);
-      })
-      .catch((error) => {
-        this.errorMessage(`${error.response.data.data.message}`)
-        this.setState({ loading: !this.state.loading });
-      });
+	  this.signUpWithEmailAndPassword();
   };
 
   /**
@@ -197,7 +164,7 @@ class FinalPage extends Component {
   signUpWithEmailAndPassword  = () => {
     axios.post('https://moov-backend-staging.herokuapp.com/api/v1/signup', {
       "password": this.state.password,
-      "user_type": "student",
+      "user_type": "driver",
       "firstname":  this.state.firstName ,
       "lastname": this.state.lastName,
       "email": this.state.email,
@@ -239,7 +206,7 @@ class FinalPage extends Component {
    */
   appNavigation = () => {
     const { navigate } = this.props.navigation;
-    navigate('Homepage.js');
+    navigate('Homepage');
   };
 
   render() {

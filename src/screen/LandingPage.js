@@ -35,9 +35,9 @@ class LandingPage extends React.Component {
 		const { navigate } = this.props.navigation;
 		this.spring();
 		AsyncStorage.getItem("user").then((value) => {
-			// if(value !== null) {
-			// 	navigate('Homepage');
-			// }
+			if(value !== null) {
+				navigate('Homepage');
+			}
 		}).done();
 	}
 	

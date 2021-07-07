@@ -3,14 +3,18 @@ import React from 'react';
 
 // third-libraries
 import { StackNavigator } from 'react-navigation';
+import { Root } from 'native-base';
 
 // screens
-import { LandingPage, SignInPage, SignUpPage, MoovPages } from './src/screen';
+import { LandingPage, SignInPage } from './src/screen';
+
+// container
+import { Homepage, Profile } from "./src/container";
 
 // component
-import { SignUpScreenTwo, SignUpScreenThree } from './src/component/SignUp';
+import { FinalPage, FirstPage, SecondPage } from "./src/component/Registration";
 
-export default MainStack = StackNavigator({
+const AppNavigator = StackNavigator({
   LandingPage: {
     screen: LandingPage,
     navigationOptions: {
@@ -23,26 +27,32 @@ export default MainStack = StackNavigator({
       header: null,
     }
   },
-  SignUpPage: {
-    screen: SignUpPage,
+  FirstPage: {
+	  screen: FirstPage,
+	  navigationOptions: {
+	    header: null,
+	  }
+  },
+  SecondPage: {
+	  screen: SecondPage,
+	  navigationOptions: {
+	    header: null,
+	  }
+  },
+  FinalPage: {
+	  screen: FinalPage,
+	  navigationOptions: {
+	    header: null,
+	  }
+  },
+	Homepage: {
+    screen: Homepage,
     navigationOptions: {
       header: null,
     }
   },
-  SignUpScreenTwo: {
-    screen: SignUpScreenTwo,
-    navigationOptions: {
-      header: null,
-    }
-  },
-  SignUpScreenThree: {
-    screen: SignUpScreenThree,
-    navigationOptions: {
-      header: null,
-    }
-  },
-  MoovPages: {
-    screen: MoovPages,
+	Profile: {
+    screen: Profile,
     navigationOptions: {
       header: null,
     }
@@ -52,3 +62,8 @@ export default MainStack = StackNavigator({
     header: 'screen',
   }
 });
+
+export default () =>
+	<Root>
+		<AppNavigator />
+	</Root>;
